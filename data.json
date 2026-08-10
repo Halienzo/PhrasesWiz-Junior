@@ -6467,11 +6467,11 @@
               },
               {
                 "type": "phrase",
-                "text": "许"
+                "text": "许下愿望"
               },
               {
                 "type": "text",
-                "text": "下愿望，希望这片热带雨林的生物多样性能够永续留存。"
+                "text": "，希望这片热带雨林的生物多样性能够永续留存。"
               }
             ]
           },
@@ -19376,7 +19376,7 @@
                 "text": "太阳"
               },
               {
-                "type": "text",
+                "type": "phrase",
                 "text": "下"
               },
               {
@@ -20927,11 +20927,11 @@
               },
               {
                 "type": "phrase",
-                "text": "记"
+                "text": "记了下来"
               },
               {
                 "type": "text",
-                "text": "了下来。"
+                "text": "。"
               }
             ]
           },
@@ -29252,11 +29252,7 @@
               },
               {
                 "type": "phrase",
-                "text": "考"
-              },
-              {
-                "type": "text",
-                "text": "上"
+                "text": "考上"
               },
               {
                 "type": "text",
@@ -29289,15 +29285,7 @@
               },
               {
                 "type": "phrase",
-                "text": "迷"
-              },
-              {
-                "type": "text",
-                "text": "上"
-              },
-              {
-                "type": "phrase",
-                "text": "了"
+                "text": "迷上了"
               },
               {
                 "type": "text",
@@ -30361,11 +30349,7 @@
               },
               {
                 "type": "phrase",
-                "text": "打"
-              },
-              {
-                "type": "text",
-                "text": "开"
+                "text": "打开"
               },
               {
                 "type": "text",
@@ -30405,12 +30389,8 @@
                 "text": "在智能温室里，只需一个语音指令，系统就会自动"
               },
               {
-                "type": "text",
-                "text": "开"
-              },
-              {
                 "type": "phrase",
-                "text": "启"
+                "text": "开启"
               },
               {
                 "type": "text",
@@ -36280,7 +36260,7 @@
                 "text": "站了"
               },
               {
-                "type": "text",
+                "type": "phrase",
                 "text": "起来"
               },
               {
@@ -46713,11 +46693,11 @@
               },
               {
                 "type": "phrase",
-                "text": "结合"
+                "text": "结合起来"
               },
               {
                 "type": "text",
-                "text": "起来。"
+                "text": "。"
               }
             ]
           },

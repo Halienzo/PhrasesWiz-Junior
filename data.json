@@ -5273,11 +5273,11 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "我们要好好"
+                "text": "我们要"
               },
               {
                 "type": "phrase",
-                "text": "利用"
+                "text": "好好利用"
               },
               {
                 "type": "text",
@@ -5306,11 +5306,11 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "为了在干旱的金沙江河谷种出甜美的沃柑，永胜县的果农们充分"
+                "text": "为了在干旱的金沙江河谷种出甜美的沃柑，永胜县的果农们"
               },
               {
                 "type": "phrase",
-                "text": "利用"
+                "text": "充分利用"
               },
               {
                 "type": "text",

@@ -3886,11 +3886,11 @@
               },
               {
                 "type": "phrase",
-                "text": "帮"
+                "text": "帮助"
               },
               {
                 "type": "text",
-                "text": "助丽江的纳西族东巴传承人用数字方式记录濒临失传的祭祀经文，让古老文明在云端永存。"
+                "text": "丽江的纳西族东巴传承人用数字方式记录濒临失传的祭祀经文，让古老文明在云端永存。"
               }
             ]
           },
@@ -3973,11 +3973,11 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "我们坐在苍山脚下的白族小院中，一边喝三道茶，一边聆"
+                "text": "我们坐在苍山脚下的白族小院中，一边喝三道茶，一边"
               },
               {
                 "type": "phrase",
-                "text": "听"
+                "text": "聆听"
               },
               {
                 "type": "text",
@@ -4255,15 +4255,15 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "如果你想在新型储能电池的研发中取得"
+                "text": "如果你想在新型储能电池的研发中取得突破，就需要每天在实验室里反复"
               },
               {
                 "type": "phrase",
-                "text": "突破"
+                "text": "推算"
               },
               {
                 "type": "text",
-                "text": "，就需要每天在实验室里反复推算数据、攻克技术难关。"
+                "text": "数据、攻克技术难关。"
               }
             ]
           },
@@ -9252,12 +9252,8 @@
                 "text": "智能机器人管家在检测到实验室无人后会自动"
               },
               {
-                "type": "text",
-                "text": "关"
-              },
-              {
                 "type": "phrase",
-                "text": "闭"
+                "text": "关闭"
               },
               {
                 "type": "text",
@@ -10880,11 +10876,7 @@
               },
               {
                 "type": "phrase",
-                "text": "很"
-              },
-              {
-                "type": "text",
-                "text": "配"
+                "text": "很配"
               },
               {
                 "type": "text",
@@ -10917,11 +10909,7 @@
               },
               {
                 "type": "phrase",
-                "text": "相"
-              },
-              {
-                "type": "text",
-                "text": "配"
+                "text": "相配"
               },
               {
                 "type": "text",
@@ -10992,11 +10980,7 @@
               },
               {
                 "type": "phrase",
-                "text": "太"
-              },
-              {
-                "type": "text",
-                "text": "多"
+                "text": "太多"
               },
               {
                 "type": "text",
@@ -11045,11 +11029,7 @@
               },
               {
                 "type": "phrase",
-                "text": "过"
-              },
-              {
-                "type": "text",
-                "text": "多"
+                "text": "过多"
               },
               {
                 "type": "text",
@@ -12623,19 +12603,15 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "中国跨了五个"
-              },
-              {
-                "type": "text",
-                "text": "时"
+                "text": "北京和伦敦不在同一个"
               },
               {
                 "type": "phrase",
-                "text": "区"
+                "text": "时区"
               },
               {
                 "type": "text",
-                "text": "，但统一使用北京时间。"
+                "text": "。"
               }
             ]
           },
@@ -13310,15 +13286,15 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "早"
+                "text": ""
               },
               {
                 "type": "phrase",
-                "text": "高峰"
+                "text": "早高峰"
               },
               {
                 "type": "text",
-                "text": "路上很堵。"
+                "text": "的地铁非常拥挤。"
               }
             ]
           },
@@ -14320,19 +14296,15 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "这个学期他的英语"
-              },
-              {
-                "type": "text",
-                "text": "进"
+                "text": "只要你坚持练习，就一定能"
               },
               {
                 "type": "phrase",
-                "text": "步"
+                "text": "进步"
               },
               {
                 "type": "text",
-                "text": "很大。"
+                "text": "。"
               }
             ]
           },
@@ -15308,19 +15280,15 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "我小时候"
-              },
-              {
-                "type": "text",
-                "text": "常"
+                "text": "爷爷"
               },
               {
                 "type": "phrase",
-                "text": "常"
+                "text": "常常"
               },
               {
                 "type": "text",
-                "text": "在这条河里游泳。"
+                "text": "给我讲他年轻时的故事。"
               }
             ]
           },
@@ -16495,19 +16463,15 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "他努力工作为了"
-              },
-              {
-                "type": "text",
-                "text": "赚"
+                "text": "他靠画插画"
               },
               {
                 "type": "phrase",
-                "text": "钱"
+                "text": "赚钱"
               },
               {
                 "type": "text",
-                "text": "养家。"
+                "text": "。"
               }
             ]
           },
@@ -16532,19 +16496,15 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "文山许多农民依靠种植名贵中药材三七"
-              },
-              {
-                "type": "text",
-                "text": "赚"
+                "text": "云南鲜花饼产业不仅"
               },
               {
                 "type": "phrase",
-                "text": "了钱"
+                "text": "赚了钱"
               },
               {
                 "type": "text",
-                "text": "，生物医药产业的蓬勃发展让曾经贫瘠的石漠化山区变成了“绿色银行”。"
+                "text": "，还带动了食用玫瑰种植、冷链物流和电商直播等多个行业的发展。"
               }
             ]
           },
@@ -17717,15 +17677,15 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "最"
+                "text": "我们找了很久，"
               },
               {
                 "type": "phrase",
-                "text": "后"
+                "text": "最后"
               },
               {
                 "type": "text",
-                "text": "，我们找到了回家的路。"
+                "text": "在公园里找到了小狗。"
               }
             ]
           },
@@ -21447,15 +21407,11 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "我发现我们有很多"
-              },
-              {
-                "type": "text",
-                "text": "共"
+                "text": "这对双胞胎有很多"
               },
               {
                 "type": "phrase",
-                "text": "同点"
+                "text": "共同点"
               },
               {
                 "type": "text",
@@ -22598,19 +22554,15 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "打印机没有"
-              },
-              {
-                "type": "text",
-                "text": "连"
+                "text": "这些岛屿由一座桥"
               },
               {
                 "type": "phrase",
-                "text": "接"
+                "text": "连接"
               },
               {
                 "type": "text",
-                "text": "到电脑。"
+                "text": "在一起。"
               }
             ]
           },
@@ -22647,11 +22599,7 @@
               },
               {
                 "type": "phrase",
-                "text": "相"
-              },
-              {
-                "type": "text",
-                "text": "连"
+                "text": "相连"
               },
               {
                 "type": "text",
@@ -22795,16 +22743,12 @@
                 "text": "他生病了，"
               },
               {
-                "type": "text",
-                "text": "因"
-              },
-              {
                 "type": "phrase",
-                "text": "此"
+                "text": "因此"
               },
               {
                 "type": "text",
-                "text": "没来上学。"
+                "text": "没来参加聚会。"
               }
             ]
           },
@@ -23321,15 +23265,11 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "请把胡萝卜"
-              },
-              {
-                "type": "text",
-                "text": "切"
+                "text": "请帮我把这些土豆"
               },
               {
                 "type": "phrase",
-                "text": "碎"
+                "text": "切碎"
               },
               {
                 "type": "text",
@@ -24279,19 +24219,15 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "比赛前我们先做"
-              },
-              {
-                "type": "text",
-                "text": "热"
+                "text": "跑步前记得先"
               },
               {
                 "type": "phrase",
-                "text": "身"
+                "text": "热身"
               },
               {
                 "type": "text",
-                "text": "运动。"
+                "text": "。"
               }
             ]
           },
@@ -24377,19 +24313,15 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "他用气球把房间"
-              },
-              {
-                "type": "text",
-                "text": "装"
+                "text": "孩子们用彩灯和剪纸"
               },
               {
                 "type": "phrase",
-                "text": "饰满"
+                "text": "装饰满"
               },
               {
                 "type": "text",
-                "text": "了。"
+                "text": "了教室。"
               }
             ]
           },
@@ -24951,19 +24883,15 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "我会"
-              },
-              {
-                "type": "text",
-                "text": "尽"
+                "text": "别担心结果，"
               },
               {
                 "type": "phrase",
-                "text": "力"
+                "text": "尽力"
               },
               {
                 "type": "text",
-                "text": "帮你。"
+                "text": "就好。"
               }
             ]
           },
@@ -25041,19 +24969,15 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "我"
-              },
-              {
-                "type": "text",
-                "text": "厌"
+                "text": "我已经"
               },
               {
                 "type": "phrase",
-                "text": "倦"
+                "text": "厌倦"
               },
               {
                 "type": "text",
-                "text": "了每天吃同样的饭菜。"
+                "text": "了每天吃同样的早餐。"
               }
             ]
           },
@@ -26846,19 +26770,15 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "听到消息后，我"
+                "text": "听到这个消息后，他"
               },
               {
                 "type": "phrase",
-                "text": "马"
+                "text": "马上"
               },
               {
                 "type": "text",
-                "text": "上"
-              },
-              {
-                "type": "text",
-                "text": "出发了。"
+                "text": "跑出了家门。"
               }
             ]
           },
@@ -27669,19 +27589,15 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "让孩子"
+                "text": "请让孩子"
               },
               {
                 "type": "phrase",
-                "text": "远"
+                "text": "远离"
               },
               {
                 "type": "text",
-                "text": "离"
-              },
-              {
-                "type": "text",
-                "text": "火源。"
+                "text": "这些危险化学品。"
               }
             ]
           },
@@ -27856,19 +27772,15 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "学生从大量阅读中"
+                "text": "我们可以从这个项目中"
               },
               {
                 "type": "phrase",
-                "text": "受"
+                "text": "受益"
               },
               {
                 "type": "text",
-                "text": "益"
-              },
-              {
-                "type": "text",
-                "text": "匪浅。"
+                "text": "良多。"
               }
             ]
           },
@@ -29425,15 +29337,15 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "试"
+                "text": "虽然你从来没做过，但不妨"
               },
               {
                 "type": "phrase",
-                "text": "试"
+                "text": "试试"
               },
               {
                 "type": "text",
-                "text": "看！你不试怎么知道。"
+                "text": "。"
               }
             ]
           },
@@ -29458,19 +29370,15 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "我从来没做过扎染，但在周城一位白族阿婆的鼓励下，我决定"
+                "text": "虽然山地自行车在陡峭的土林里穿行非常危险，但向导还是鼓励我们"
               },
               {
                 "type": "phrase",
-                "text": "放手一"
+                "text": "放手一试"
               },
               {
                 "type": "text",
-                "text": "试"
-              },
-              {
-                "type": "text",
-                "text": "，结果扎出了一块非常漂亮的蓝白花布。"
+                "text": "，因为那种御风而行的感觉实在是太棒了。"
               }
             ]
           },
@@ -31102,19 +31010,15 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "我头疼，想"
-              },
-              {
-                "type": "text",
-                "text": "躺"
+                "text": "你看起来很累，去"
               },
               {
                 "type": "phrase",
-                "text": "下"
+                "text": "躺下"
               },
               {
                 "type": "text",
-                "text": "休息一会儿。"
+                "text": "休息一会儿吧。"
               }
             ]
           },
@@ -32311,15 +32215,11 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "她收到礼物后"
-              },
-              {
-                "type": "text",
-                "text": "笑"
+                "text": "听到好消息后，他"
               },
               {
                 "type": "phrase",
-                "text": "容满面"
+                "text": "笑容满面"
               },
               {
                 "type": "text",
@@ -32800,15 +32700,11 @@
               },
               {
                 "type": "phrase",
-                "text": "后"
+                "text": "后悔"
               },
               {
                 "type": "text",
-                "text": "悔"
-              },
-              {
-                "type": "text",
-                "text": "忘了她的生日。"
+                "text": "没早点开始学钢琴。"
               }
             ]
           },
@@ -33514,15 +33410,15 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "深"
+                "text": "先"
               },
               {
                 "type": "phrase",
-                "text": "呼吸"
+                "text": "深呼吸"
               },
               {
                 "type": "text",
-                "text": "，放松。"
+                "text": "，再慢慢回答。"
               }
             ]
           },
@@ -33547,19 +33443,15 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "站在大理苍山洗马潭前，我"
-              },
-              {
-                "type": "text",
-                "text": "深"
+                "text": "站在玉龙雪山海拔4680米的观景台上，我"
               },
               {
                 "type": "phrase",
-                "text": "吸一口气"
+                "text": "深吸一口气"
               },
               {
                 "type": "text",
-                "text": "，那种冰凉清新的感觉瞬间充满全身。"
+                "text": "，冰凉的空气沁入心脾，远处贡嘎雪山金光闪闪。"
               }
             ]
           },
@@ -34629,19 +34521,15 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "当亚洲象接近村庄的传感器触发警报时，村广播立刻"
-              },
-              {
-                "type": "text",
-                "text": "响"
+                "text": "正在这时，防空警报突然"
               },
               {
                 "type": "phrase",
-                "text": "起"
+                "text": "响起"
               },
               {
                 "type": "text",
-                "text": "，通知村民撤离。"
+                "text": "，所有人都按照演练要求迅速进入了地下掩体。"
               }
             ]
           },
@@ -35876,15 +35764,11 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "这本书真"
-              },
-              {
-                "type": "text",
-                "text": "好"
+                "text": "这本侦探小说很"
               },
               {
                 "type": "phrase",
-                "text": "看"
+                "text": "好看"
               },
               {
                 "type": "text",
@@ -36054,15 +35938,11 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "我在森林里"
-              },
-              {
-                "type": "text",
-                "text": "迷"
+                "text": "我们在森林里"
               },
               {
                 "type": "phrase",
-                "text": "路"
+                "text": "迷路"
               },
               {
                 "type": "text",
@@ -36099,19 +35979,15 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "几个游客在苍山未开放区域"
-              },
-              {
-                "type": "text",
-                "text": "迷"
+                "text": "去年有一支科考队在独龙江的原始森林里"
               },
               {
                 "type": "phrase",
-                "text": "了路"
+                "text": "迷了路"
               },
               {
                 "type": "text",
-                "text": "，最终靠北斗卫星短信求救才脱险。"
+                "text": "，幸好他们随身携带了北斗卫星定位器，救援直升机很快找到了他们。"
               }
             ]
           },
@@ -36773,15 +36649,11 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "我们应该照顾"
+                "text": "我们应该善待"
               },
               {
                 "type": "phrase",
-                "text": "老"
-              },
-              {
-                "type": "text",
-                "text": "人"
+                "text": "老人"
               },
               {
                 "type": "text",

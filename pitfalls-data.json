@@ -1,0 +1,1125 @@
+{
+  "meta": {
+    "version": "1.0",
+    "totalPitfalls": 68,
+    "categories": [
+      "形近/义近混淆",
+      "固定搭配·介词后接doing",
+      "含sb/sth槽位结构",
+      "一词多义",
+      "介词搭配辨析",
+      "时间/方位介词辨析",
+      "连词与时态/语序",
+      "形态变化易错",
+      "语法基础·介词后接成分总论"
+    ]
+  },
+
+  "grammarPrimer": {
+    "id": "grammar-prep",
+    "title": "介词后接什么？——从 doing 到一切名词性成分",
+    "category": "语法基础·介词后接成分总论",
+    "difficulty": 3,
+    "summary": "很多学生把「介词 + doing」当作机械口诀背诵，但doing只是冰山一角。介词本质上需要一个「名词性成分」做宾语——名词、代词宾格、动名词(doing)、名词性从句都可以。理解了这个底层原理，就不会在介词后乱加to do或原形动词。",
+    "principle": {
+      "rule": "介词（to / at / in / of / for / from / with / about / on ...）后面必须接名词性成分（能充当名词角色的结构）。",
+      "whyNotToDo": "不定式 to do 是「动词性」结构，不能直接作介词宾语。介词 to 和不定式 to 长得一样但本质不同——这是中国学生最易混淆的点。"
+    },
+    "fiveTypes": [
+      {
+        "type": "名词",
+        "label": "名词 (Noun)",
+        "explain": "介词后直接接名词，最简单的情形。",
+        "examples": [
+          {"phrase": "look at the photo", "from": "look at (7上#2)", "analysis": "at + 名词 photo"},
+          {"phrase": "listen to music", "from": "listen to (7上#39)", "analysis": "to + 名词 music"},
+          {"phrase": "be late for school", "from": "be late for (7下#11)", "analysis": "for + 名词 school"},
+          {"phrase": "be proud of her achievements", "from": "be proud of (8下#45)", "analysis": "of + 名词短语"},
+          {"phrase": "be different from others", "from": "be different from (7上#33)", "analysis": "from + 名词 others"}
+        ]
+      },
+      {
+        "type": "代词宾格",
+        "label": "代词宾格 (Object Pronoun)",
+        "explain": "介词后用宾格（me/him/her/us/them），绝不能用主格（I/he/she/we/they）。",
+        "examples": [
+          {"phrase": "look at me", "from": "look at (7上#2)", "analysis": "at + 宾格 me（不是 I）"},
+          {"phrase": "agree with him", "from": "agree with (7下#84)", "analysis": "with + 宾格 him（不是 he）"},
+          {"phrase": "depend on them", "from": "depend on (8上#79)", "analysis": "on + 宾格 them（不是 they）"},
+          {"phrase": "share it with us", "from": "share sth with sb (8上#26)", "analysis": "with + 宾格 us（不是 we）"}
+        ]
+      },
+      {
+        "type": "动名词",
+        "label": "动名词 / doing (Gerund)",
+        "explain": "动词要作介词宾语，必须变成动名词 V-ing。这是考试最高频的考点。注意：介词 to（如 look forward to）后面的 doing 也属于此类——这里的 to 是介词，不是不定式符号。",
+        "examples": [
+          {"phrase": "look forward to seeing you", "from": "look forward to (7下#50)", "analysis": "to(介) + doing，不是 to see！"},
+          {"phrase": "be good at swimming", "from": "be good at (7上#40)", "analysis": "at + doing"},
+          {"phrase": "be interested in reading", "from": "be interested in (7上#48)", "analysis": "in + doing"},
+          {"phrase": "succeed in passing the exam", "from": "succeed in doing sth (7下#102)", "analysis": "in + doing"},
+          {"phrase": "have fun (in) playing games", "from": "have fun (7上#22)", "analysis": "in 可省略，但后面仍是 doing"},
+          {"phrase": "be worth reading", "from": "be worth doing (9下#30)", "analysis": "worth + doing（主动表被动）"},
+          {"phrase": "stop him from smoking", "from": "stop...from doing (8下#15)", "analysis": "from + doing"},
+          {"phrase": "keep on trying", "from": "keep on doing sth (8上#65)", "analysis": "on + doing"},
+          {"phrase": "be/get used to getting up early", "from": "be/get used to (8下#73)", "analysis": "to(介) + doing，不是 to get up！"},
+          {"phrase": "dream of becoming a doctor", "from": "dream of (8下#10)", "analysis": "of + doing"},
+          {"phrase": "think about changing jobs", "from": "think about (7下#22)", "analysis": "about + doing"},
+          {"phrase": "worry about failing", "from": "worry about (8上#87)", "analysis": "about + doing"}
+        ]
+      },
+      {
+        "type": "Wh-名词性从句",
+        "label": "Wh-名词性从句 (Wh-Nominal Clause)",
+        "explain": "介词后可以接 wh- 引导的名词性从句（包括 what/when/where/how/whether 等），整体充当介词宾语。",
+        "examples": [
+          {"phrase": "think about what to do next", "from": "think about (7下#22)", "analysis": "about + wh-不定式短语"},
+          {"phrase": "depend on when we start", "from": "depend on (8上#79)", "analysis": "on + when 从句"},
+          {"phrase": "pay attention to what the teacher says", "from": "pay attention to (8上#94)", "analysis": "to + what 从句"},
+          {"phrase": "be interested in how it works", "from": "be interested in (7上#48)", "analysis": "in + how 从句"},
+          {"phrase": "look forward to what you will bring", "from": "look forward to (7下#50)", "analysis": "to(介) + what 从句"}
+        ]
+      },
+      {
+        "type": "That-从句",
+        "label": "That-名词性从句（少见但存在）",
+        "explain": "介词后直接接 that 从句在现代英语中较少见（that 从句作介词宾语通常需要先加 the fact），但「介词 + the fact + that 从句」是标准书面语表达。",
+        "examples": [
+          {"phrase": "be proud of the fact that he won", "from": "be proud of (8下#45)", "analysis": "of + the fact + that从句"},
+          {"phrase": "be aware of the fact that time is limited", "from": "be aware of (9下#12)", "analysis": "of + the fact + that从句"}
+        ]
+      }
+    ],
+    "keyTakeaway": "口诀：介词后面三类名——「名·代·doing」（名词、代词宾格、动名词），进阶再加「从句」行。关键是：绝不在介词后直接放动词原形或 to do（除非 to 本身是不定式符号，而非常规介词）。",
+    "confusablePrepositions": [
+      {
+        "pair": "to（介词）vs to（不定式符号）",
+        "how": "介词 to 后面接名词/代词/doing；不定式 to 后面接动词原形。如何判断？看 to 前面的词——如果 to 前面是 look forward / be used / be accustomed / object 等，to 往往是介词。如果不确定，试着在 to 后面放一个名词，如果通顺就是介词。",
+        "testPhrases": ["look forward to", "be/get used to", "pay attention to", "belong to", "lead to"]
+      }
+    ]
+  },
+
+  "pitfalls": [
+    {
+      "id": "pit-001",
+      "title": "a lot vs a lot of — 副词 vs 限定词",
+      "category": "形近/义近混淆",
+      "phrases": [{"semId": "7a", "num": 10}, {"semId": "7a", "num": 20}],
+      "comparison": [
+        {"phrase": "a lot", "pos": "副词短语", "meaning": "非常、很", "usage": "修饰动词/形容词，后面不接名词", "eg": "She reads a lot. / I'm a lot happier now."},
+        {"phrase": "a lot of", "pos": "限定词短语", "meaning": "很多、大量的", "usage": "后接可数名词复数或不可数名词", "eg": "A lot of people came."}
+      ],
+      "commonMistakes": [
+        {"wrong": "I have a lot books.", "right": "I have a lot of books.", "explain": "a lot 是副词，不能直接修饰名词"}
+      ],
+      "testExample": {"type": "选择题", "question": "He reads ___ every day. He has ___ books at home.", "options": ["A. a lot; a lot of", "B. a lot of; a lot", "C. a lot; a lot", "D. a lot of; a lot of"], "answer": "A"},
+      "difficulty": 2
+    },
+    {
+      "id": "pit-002",
+      "title": "every day vs everyday — 时间状语 vs 定语形容词",
+      "category": "形近/义近混淆",
+      "phrases": [{"semId": "7a", "num": 18}],
+      "comparison": [
+        {"phrase": "every day", "pos": "副词短语（时间状语）", "meaning": "每天（= each day）", "usage": "修饰动词，回答 When? 的问题", "eg": "I go to school every day."},
+        {"phrase": "everyday", "pos": "形容词（定语）", "meaning": "日常的、平常的（= daily / ordinary）", "usage": "放在名词前面修饰名词", "eg": "This is an everyday problem."}
+      ],
+      "commonMistakes": [
+        {"wrong": "I go to school everyday.", "right": "I go to school every day.", "explain": "修饰动词 go 要用时间状语 every day（两个词）"},
+        {"wrong": "This is an every day thing.", "right": "This is an everyday thing.", "explain": "修饰名词 thing 要用形容词 everyday（一个词）"}
+      ],
+      "testExample": {"type": "改错题", "question": "We have everyday English classes, and we speak English every day. (判断画线部分正误)", "explain": "everyday English classes ✓（形容词修饰名词）；every day ✓（状语修饰 speak）——原句恰好正确，但考试常颠倒出题"},
+      "difficulty": 3
+    },
+    {
+      "id": "pit-003",
+      "title": "in the future vs in future — 将来某个时间 vs 从今往后",
+      "category": "形近/义近混淆",
+      "phrases": [{"semId": "7a", "num": 41}, {"semId": "8b", "num": 28}],
+      "comparison": [
+        {"phrase": "in the future", "pos": "副词短语", "meaning": "在将来（某个不确定的时间）", "usage": "中性描述未来", "eg": "Robots will do more work in the future."},
+        {"phrase": "in future", "pos": "副词短语", "meaning": "从今往后、今后（= from now on）", "usage": "含警告/建议口吻", "eg": "In future, be more careful with your money."}
+      ],
+      "commonMistakes": [
+        {"wrong": "In the future, please arrive on time.", "right": "In future, please arrive on time.", "explain": "对今后行为的告诫/建议用 in future"},
+        {"wrong": "Nobody knows what will happen in future.", "right": "Nobody knows what will happen in the future.", "explain": "中性描述将来用 in the future"}
+      ],
+      "testExample": {"type": "选择题", "question": "___ please lock the door when you leave the office.", "options": ["A. In the future", "B. In future", "C. At the future"], "answer": "B", "explain": "对今后行为的要求用 in future"},
+      "difficulty": 3
+    },
+    {
+      "id": "pit-004",
+      "title": "each other vs one another — 两者 vs 三者及以上（传统区分）",
+      "category": "形近/义近混淆",
+      "phrases": [{"semId": "7a", "num": 1}, {"semId": "7b", "num": 3}],
+      "comparison": [
+        {"phrase": "each other", "pos": "代词短语", "meaning": "互相（传统：两者之间）", "usage": "The twins help each other.", "eg": "The two friends hugged each other."},
+        {"phrase": "one another", "pos": "代词短语", "meaning": "互相（传统：三者及以上）", "usage": "All classmates help one another.", "eg": "The team members support one another."}
+      ],
+      "commonMistakes": [
+        {"wrong": "（现代英语中两者常混用，但教材分列，考试中可能要求区分）", "right": "按传统规则答题：两者用 each other，三人以上用 one another", "explain": "人教版7上和7下分别教授，说明教材有意区分"}
+      ],
+      "testExample": {"type": "选词填空", "question": "The twins love ___ very much. / All the students in the class help ___.", "answer": "each other; one another"},
+      "difficulty": 2
+    },
+    {
+      "id": "pit-005",
+      "title": "too many vs too much vs much too — 三胞胎彻底辨析",
+      "category": "形近/义近混淆",
+      "phrases": [{"semId": "7b", "num": 7}, {"semId": "7b", "num": 35}],
+      "comparison": [
+        {"phrase": "too many", "pos": "限定词短语", "meaning": "太多（+可数名词复数）", "usage": "too many + 可数名词复数", "eg": "too many people / too many mistakes"},
+        {"phrase": "too much", "pos": "限定词 / 副词短语", "meaning": "太多（+不可数名词 / 修饰动词）", "usage": "too much + 不可数名词 / V + too much", "eg": "too much water / eat too much"},
+        {"phrase": "much too", "pos": "副词短语（教材未直接收录，但学生易混）", "meaning": "实在太...（+形容词/副词）", "usage": "much too + adj / adv", "eg": "much too hot / much too fast"}
+      ],
+      "commonMistakes": [
+        {"wrong": "There are too much people.", "right": "There are too many people.", "explain": "people 可数，用 too many"},
+        {"wrong": "This coffee is too much hot.", "right": "This coffee is much too hot.", "explain": "修饰形容词 hot 用 much too"}
+      ],
+      "testExample": {"type": "选择题", "question": "He ate ___ and felt sick. There was ___ food on the table.", "options": ["A. too many; too much", "B. too much; too much", "C. too much; much too", "D. much too; too much"], "answer": "B"},
+      "difficulty": 3
+    },
+    {
+      "id": "pit-006",
+      "title": "a few / few / quite a few — 肯定 vs 否定 vs 相当多",
+      "category": "形近/义近混淆",
+      "phrases": [{"semId": "7b", "num": 25}],
+      "comparison": [
+        {"phrase": "a few", "pos": "限定词短语", "meaning": "几个、一些（肯定含义：有，虽然不多）", "eg": "I have a few friends here, so I'm not lonely."},
+        {"phrase": "few", "pos": "限定词（教材未直接收）", "meaning": "几乎没有（否定含义：少到几乎没有）", "eg": "He has few friends. He feels lonely."},
+        {"phrase": "quite a few", "pos": "限定词短语（教材未直接收）", "meaning": "相当多（= many）", "eg": "Quite a few students passed the exam."}
+      ],
+      "commonMistakes": [
+        {"wrong": "He has a few money.", "right": "He has a little money.", "explain": "few/a few + 可数；a little/little + 不可数"}
+      ],
+      "testExample": {"type": "选择题", "question": "I have ___ friends here, so I feel quite happy.", "options": ["A. few", "B. a few", "C. little", "D. a little"], "answer": "B", "explain": "肯定含义+可数名词→a few"},
+      "difficulty": 2
+    },
+    {
+      "id": "pit-007",
+      "title": "do exercises vs do exercise — 可数 vs 不可数",
+      "category": "形近/义近混淆",
+      "phrases": [{"semId": "7a", "num": 34}, {"semId": "7a", "num": 35}],
+      "comparison": [
+        {"phrase": "do exercises", "pos": "动词短语", "meaning": "做操/做练习题（可数，指具体的动作）", "eg": "do morning exercises / do math exercises"},
+        {"phrase": "do exercise", "pos": "动词短语", "meaning": "锻炼身体（不可数，泛指体育锻炼）", "eg": "do exercise regularly to keep fit"}
+      ],
+      "commonMistakes": [
+        {"wrong": "I do morning exercise every day.", "right": "I do morning exercises every day.", "explain": "早操是一套具体动作，用复数 exercises"},
+        {"wrong": "You should do more exercises to stay healthy.", "right": "You should do more exercise to stay healthy.", "explain": "泛指锻炼身体，用不可数 exercise"}
+      ],
+      "testExample": {"type": "选择题", "question": "We ___ every morning to stay healthy, and we also ___ in math class.", "options": ["A. do exercise; do exercises", "B. do exercises; do exercise", "C. do exercise; do exercise", "D. do exercises; do exercises"], "answer": "A"},
+      "difficulty": 2
+    },
+    {
+      "id": "pit-008",
+      "title": "used to do vs be/get used to doing — 过去习惯 vs 现在习惯",
+      "category": "形近/义近混淆",
+      "phrases": [{"semId": "7b", "num": 78}, {"semId": "8b", "num": 73}],
+      "comparison": [
+        {"phrase": "used to do", "pos": "情态动词短语", "meaning": "过去常常做（现在不做了）", "usage": "used to + 动词原形", "eg": "I used to get up late, but now I get up early."},
+        {"phrase": "be/get used to doing", "pos": "动词短语", "meaning": "习惯做某事", "usage": "be/get used to + 名词/doing（to是介词！）", "eg": "I am used to getting up early now."}
+      ],
+      "commonMistakes": [
+        {"wrong": "I am used to get up early.", "right": "I am used to getting up early.", "explain": "be used to 中的 to 是介词，后面接 doing，不是 do！"},
+        {"wrong": "I used to getting up late.", "right": "I used to get up late.", "explain": "used to do 后面接动词原形"}
+      ],
+      "testExample": {"type": "填空题", "question": "He ___ (过去常常) smoke, but now he ___ (习惯) living a healthy life.", "answer": "used to; is used to"},
+      "difficulty": 3
+    },
+    {
+      "id": "pit-009",
+      "title": "some day vs someday — 分开 vs 合并",
+      "category": "形近/义近混淆",
+      "phrases": [{"semId": "7b", "num": 64}],
+      "comparison": [
+        {"phrase": "some day", "pos": "副词短语", "meaning": "某一天（指具体的、不确定的一天）", "eg": "Let's meet some day next week."},
+        {"phrase": "someday", "pos": "副词", "meaning": "总有一天、有朝一日（= one day，指遥远的将来）", "eg": "Someday I'll travel around the world."}
+      ],
+      "commonMistakes": [
+        {"wrong": "（考试通常通过语境选择分开/合并形式）", "right": "具体某天→ some day；未来某天（梦想）→ someday"}
+      ],
+      "testExample": {"type": "判断正误", "question": "I hope someday I can visit Yunnan again.", "explain": "✓：someday 指有朝一日（梦想），用合并形式正确"},
+      "difficulty": 2
+    },
+    {
+      "id": "pit-010",
+      "title": "be made of vs be made from — 看得出 vs 看不出原材料",
+      "category": "形近/义近混淆",
+      "phrases": [{"semId": "7b", "num": 8}],
+      "comparison": [
+        {"phrase": "be made of", "pos": "动词短语（系表）", "meaning": "由…制成（看得出原材料）", "eg": "The desk is made of wood. → 看得出是木头"},
+        {"phrase": "be made from", "pos": "动词短语（教材未直接收）", "meaning": "由…制成（看不出原材料）", "eg": "Paper is made from wood. → 看不出是木头"}
+      ],
+      "commonMistakes": [
+        {"wrong": "Paper is made of wood.", "right": "Paper is made from wood.", "explain": "纸看不出木头的样子→ from"},
+        {"wrong": "The chair is made from wood.", "right": "The chair is made of wood.", "explain": "椅子能看出木头的纹理→ of"}
+      ],
+      "testExample": {"type": "选择题", "question": "The ring is ___ gold. / Wine is ___ grapes.", "options": ["A. made of; made of", "B. made from; made from", "C. made of; made from", "D. made from; made of"], "answer": "C", "explain": "金戒指看得出金子→of；葡萄酒看不出葡萄→from"},
+      "difficulty": 2
+    },
+
+    {
+      "id": "pit-101",
+      "title": "have fun (in) doing — 介词后必须用 doing",
+      "category": "固定搭配·介词后接doing",
+      "phrases": [{"semId": "7a", "num": 22}],
+      "comparison": [
+        {"phrase": "have fun", "pos": "动词短语", "meaning": "玩得开心", "usage": "have fun (in) doing sth（in 常省略，但 doing 保留）"}
+      ],
+      "commonMistakes": [
+        {"wrong": "We had fun to swim in the sea.", "right": "We had fun swimming in the sea.", "explain": "fun 后面省略了介词 in，所以要用 doing，不能用 to do"}
+      ],
+      "testExample": {"type": "填空题", "question": "The children had great fun ___ (play) in the park.", "answer": "playing"},
+      "difficulty": 3
+    },
+    {
+      "id": "pit-102",
+      "title": "look forward to doing — to 是介词，不是不定式符号！",
+      "category": "固定搭配·介词后接doing",
+      "phrases": [{"semId": "7b", "num": 50}],
+      "comparison": [
+        {"phrase": "look forward to", "pos": "动词短语", "meaning": "期盼、期待", "usage": "look forward to + n./pron./doing（to 是介词！）"},
+        {"note": "同理：pay attention to, be used to, belong to, lead to 中的 to 都是介词，后面都可以接 doing", "eg": "pay attention to writing / be used to getting up early"}
+      ],
+      "commonMistakes": [
+        {"wrong": "I look forward to see you.", "right": "I look forward to seeing you.", "explain": "这是中国学生最高频错误之一！to 在这里是介词而非不定式符号"}
+      ],
+      "testExample": {"type": "填空题", "question": "I'm looking forward to ___ (hear) from you soon.", "answer": "hearing"},
+      "difficulty": 3
+    },
+    {
+      "id": "pit-103",
+      "title": "be worth doing — 主动形式表被动含义",
+      "category": "固定搭配·介词后接doing",
+      "phrases": [{"semId": "9b", "num": 30}],
+      "comparison": [
+        {"phrase": "be worth doing", "pos": "形容词短语（系表）", "meaning": "值得做", "usage": "be worth + doing（用主动形式，但含义可被动）"}
+      ],
+      "commonMistakes": [
+        {"wrong": "The book is worth being read.", "right": "The book is worth reading.", "explain": "worth 后用主动形式的 doing，不用于被动"}
+      ],
+      "testExample": {"type": "填空题", "question": "This movie is worth ___ (watch) a second time.", "answer": "watching"},
+      "difficulty": 3
+    },
+    {
+      "id": "pit-104",
+      "title": "succeed in doing sth",
+      "category": "固定搭配·介词后接doing",
+      "phrases": [{"semId": "7b", "num": 102}],
+      "comparison": [
+        {"phrase": "succeed in doing sth", "pos": "动词短语", "meaning": "成功做某事", "usage": "succeed in + n./doing"}
+      ],
+      "commonMistakes": [
+        {"wrong": "He succeeded to pass the exam.", "right": "He succeeded in passing the exam.", "explain": "succeed 不能接 to do，只能接 in doing"}
+      ],
+      "testExample": {"type": "同义句", "question": "He passed the exam. → He ___ ___ ___ the exam.", "answer": "succeeded in passing"},
+      "difficulty": 2
+    },
+    {
+      "id": "pit-105",
+      "title": "be good at / be interested in / dream of / stop…from — 全部接 doing",
+      "category": "固定搭配·介词后接doing",
+      "phrases": [{"semId": "7a", "num": 40}, {"semId": "7a", "num": 48}, {"semId": "8b", "num": 10}, {"semId": "8b", "num": 15}],
+      "comparison": [
+        {"phrase": "be good at doing", "meaning": "擅长做某事", "eg": "She is good at dancing."},
+        {"phrase": "be interested in doing", "meaning": "对…感兴趣", "eg": "He is interested in collecting stamps."},
+        {"phrase": "dream of doing", "meaning": "梦想做某事", "eg": "She dreams of becoming a singer."},
+        {"phrase": "stop sb from doing", "meaning": "阻止某人做某事", "eg": "The rain stopped us from going out."},
+        {"phrase": "keep on doing", "meaning": "持续做某事", "eg": "Keep on trying!"},
+        {"phrase": "worry about doing", "meaning": "担心做某事", "eg": "Don't worry about failing."},
+        {"phrase": "think about doing", "meaning": "考虑做某事", "eg": "I'm thinking about changing my job."},
+        {"phrase": "feel like doing", "meaning": "想做某事", "eg": "I feel like going for a walk."}
+      ],
+      "commonMistakes": [
+        {"wrong": "以上短语后面统一不能接 to do！", "right": "全部接 doing（动名词）", "explain": "这些短语末尾的词（at, in, of, from, on, about, like）都是介词，介词后面必须接名词性成分——动词变成 doing"}
+      ],
+      "testExample": {"type": "填空题", "question": "Are you interested in ___ (join) the club?", "answer": "joining"},
+      "difficulty": 2
+    },
+
+    {
+      "id": "pit-201",
+      "title": "help sb with sth vs help sb (to) do sth — 两种结构都要掌握",
+      "category": "含sb/sth槽位结构",
+      "phrases": [{"semId": "7a", "num": 38}],
+      "comparison": [
+        {"phrase": "help sb with sth", "meaning": "在某事上帮助某人", "structure": "help + sb + with + 名词", "eg": "He helps me with my English."},
+        {"phrase": "help sb (to) do sth", "meaning": "帮助某人做某事", "structure": "help + sb + (to) do + 某事", "eg": "He helps me learn English."}
+      ],
+      "commonMistakes": [
+        {"wrong": "He helped me with learn English.", "right": "He helped me with my English. / He helped me (to) learn English.", "explain": "with 后接名词，不能接动词；两种结构不能混用"}
+      ],
+      "testExample": {"type": "句型转换", "question": "He helps me with my homework. = He helps me ___ ___ my homework.", "answer": "(to) do"},
+      "difficulty": 2
+    },
+    {
+      "id": "pit-202",
+      "title": "prepare sth for sb — 为某人准备某物",
+      "category": "含sb/sth槽位结构",
+      "phrases": [{"semId": "7a", "num": 61}],
+      "comparison": [
+        {"phrase": "prepare sth for sb", "structure": "prepare + 某物 + for + 某人", "eg": "Mom prepared a big dinner for us."},
+        {"phrase": "prepare for sth", "structure": "prepare + for + 某事（为…做准备）", "eg": "We are preparing for the exam."}
+      ],
+      "commonMistakes": [
+        {"wrong": "Mom prepared for us a big dinner.", "right": "Mom prepared a big dinner for us.", "explain": "prepare sb sth 不常见；用 prepare sth for sb"}
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "pit-203",
+      "title": "share sth with sb — 和某人分享某物",
+      "category": "含sb/sth槽位结构",
+      "phrases": [{"semId": "8a", "num": 26}],
+      "comparison": [
+        {"phrase": "share sth with sb", "structure": "share + 某物 + with + 某人", "eg": "I shared my lunch with him."}
+      ],
+      "commonMistakes": [
+        {"wrong": "I shared my lunch to him.", "right": "I shared my lunch with him.", "explain": "share 搭配介词 with，不是 to"}
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "pit-204",
+      "title": "agree with sb vs agree to sth — 介词决定宾语类型",
+      "category": "含sb/sth槽位结构",
+      "phrases": [{"semId": "7b", "num": 84}],
+      "comparison": [
+        {"phrase": "agree with sb", "meaning": "同意某人（的意见）", "eg": "I agree with you."},
+        {"phrase": "agree to sth", "meaning": "同意某事（计划/建议）", "eg": "He agreed to the plan."},
+        {"phrase": "agree to do sth", "meaning": "同意做某事（to 是不定式）", "eg": "She agreed to help us."}
+      ],
+      "commonMistakes": [
+        {"wrong": "I agree you.", "right": "I agree with you.", "explain": "agree 是不及物动词，不能直接接宾语，需要介词"}
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "pit-205",
+      "title": "give sb a lift / lend sb a hand — 固定双宾语",
+      "category": "含sb/sth槽位结构",
+      "phrases": [{"semId": "8a", "num": 21}, {"semId": "8a", "num": 37}],
+      "comparison": [
+        {"phrase": "give sb a lift", "meaning": "捎某人一程", "eg": "Can you give me a lift?"},
+        {"phrase": "lend sb a hand", "meaning": "帮某人一把", "eg": "Could you lend me a hand?"}
+      ],
+      "commonMistakes": [
+        {"wrong": "give a lift to me / lend a hand to me → 语法没错但不自然", "right": "give me a lift / lend me a hand（双宾语更自然）"}
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "pit-206",
+      "title": "show sb around — 带某人参观",
+      "category": "含sb/sth槽位结构",
+      "phrases": [{"semId": "8a", "num": 84}],
+      "comparison": [
+        {"phrase": "show sb around (somewhere)", "structure": "show + sb + around + (地点)", "eg": "Let me show you around the school."}
+      ],
+      "commonMistakes": [
+        {"wrong": "Let me show around you.", "right": "Let me show you around.", "explain": "around 放在宾语之后，不是之前"}
+      ],
+      "difficulty": 2
+    },
+
+    {
+      "id": "pit-301",
+      "title": "work out — 解决 vs 锻炼",
+      "category": "一词多义",
+      "phrases": [{"semId": "7a", "num": 42}, {"semId": "7b", "num": 31}],
+      "comparison": [
+        {"phrase": "work out (7上)", "meaning": "解出（题目）、解决（问题）= solve", "eg": "Can you work out this math problem?"},
+        {"phrase": "work out (7下)", "meaning": "锻炼身体 = exercise", "eg": "He works out at the gym every day."},
+        {"phrase": "work out (进阶)", "meaning": "进展顺利 = go well", "eg": "Things worked out well in the end."}
+      ],
+      "commonMistakes": [
+        {"wrong": "（学生通常在阅读中遇到不熟悉的义项时理解错误）", "right": "根据上下文判断：接 problem 等词→解决；接地点/频率→锻炼；接 well→进展"}
+      ],
+      "testExample": {"type": "一词多义选择", "question": "① He ___ the answer quickly. ② She ___ at the gym every morning.", "options": ["A. worked out; works out", "B. worked on; works on"], "answer": "A", "explain": "句①解决=worked out；句②锻炼=works out"},
+      "difficulty": 2
+    },
+    {
+      "id": "pit-302",
+      "title": "put 家族七胞胎 — put up/on/off/out/back",
+      "category": "一词多义",
+      "phrases": [{"semId": "7a", "num": 30}, {"semId": "7b", "num": 37}, {"semId": "8a", "num": 54}, {"semId": "8a", "num": 72}, {"semId": "9a", "num": 20}],
+      "comparison": [
+        {"phrase": "put up", "meaning": "张贴；搭建；举起", "eg": "put up a poster / a tent / your hand"},
+        {"phrase": "put on", "meaning": "穿上；上演；增加（体重）", "eg": "put on a coat / a play / weight"},
+        {"phrase": "put off", "meaning": "推迟 = delay", "eg": "put off the meeting"},
+        {"phrase": "put out", "meaning": "扑灭（火）= extinguish", "eg": "put out the fire"},
+        {"phrase": "put sth back", "meaning": "把…放回原处", "eg": "Put the book back on the shelf."}
+      ],
+      "commonMistakes": [
+        {"wrong": "put off 也可能被理解为'脱下'（实际是 take off）", "right": "脱下=take off；推迟=put off——中国学生经典混淆"}
+      ],
+      "testExample": {"type": "选择题", "question": "Never ___ till tomorrow what you can do today.", "options": ["A. put up", "B. put on", "C. put off", "D. put out"], "answer": "C"},
+      "difficulty": 3
+    },
+    {
+      "id": "pit-303",
+      "title": "take 大家族 — take up/over/off/place/part in/care of",
+      "category": "一词多义",
+      "phrases": [{"semId": "8a", "num": 71}, {"semId": "8a", "num": 76}, {"semId": "7b", "num": 57}, {"semId": "7b", "num": 1}],
+      "comparison": [
+        {"phrase": "take up", "meaning": "开始学/从事；占据（空间/时间）", "eg": "take up a hobby; The table takes up too much space."},
+        {"phrase": "take over", "meaning": "接管；取代", "eg": "take over the business"},
+        {"phrase": "take place", "meaning": "发生（= happen，无被动）", "eg": "The story takes place in Beijing."},
+        {"phrase": "take part in", "meaning": "参加（活动）= join in", "eg": "take part in the competition"},
+        {"phrase": "take care of", "meaning": "照顾 = look after", "eg": "take care of the baby"}
+      ],
+      "commonMistakes": [
+        {"wrong": "The meeting was taken place last week.", "right": "The meeting took place last week.", "explain": "take place = happen，不及物，不能用于被动语态！"}
+      ],
+      "testExample": {"type": "选择题", "question": "Great changes have ___ in China in recent years.", "options": ["A. taken place", "B. been taken place", "C. taken part", "D. taken over"], "answer": "A", "explain": "take place 不能用于被动→排除B"},
+      "difficulty": 3
+    },
+    {
+      "id": "pit-304",
+      "title": "look 家族 — look at/for/after/forward to/up/down on",
+      "category": "一词多义",
+      "phrases": [{"semId": "7a", "num": 2}, {"semId": "8a", "num": 9}, {"semId": "7b", "num": 4}, {"semId": "7b", "num": 50}, {"semId": "9a", "num": 15}, {"semId": "9a", "num": 55}],
+      "comparison": [
+        {"phrase": "look at", "meaning": "看（静态）"},
+        {"phrase": "look for", "meaning": "寻找（过程）", "note": "与 find（找到，结果）区分"},
+        {"phrase": "look after", "meaning": "照看 = take care of"},
+        {"phrase": "look forward to", "meaning": "期盼", "note": "to 是介词！"},
+        {"phrase": "look up", "meaning": "查阅（字典）"},
+        {"phrase": "look down on", "meaning": "看不起、轻视", "note": "反义：look up to 尊敬（9上#7）"}
+      ],
+      "commonMistakes": [
+        {"wrong": "I looked for my key and I looked for it everywhere but couldn't find it.", "right": "I looked for my key everywhere but couldn't find it.", "explain": "look for = 找（过程）；find = 找到（结果）"}
+      ],
+      "testExample": {"type": "选词填空", "question": "I ___ my glasses everywhere but I can't ___ them.", "options": ["looked for / find"], "answer": "looked for; find"},
+      "difficulty": 2
+    },
+    {
+      "id": "pit-305",
+      "title": "get 大家族 — get up/dressed/lost/over/into/to know",
+      "category": "一词多义",
+      "phrases": [{"semId": "7a", "num": 56}, {"semId": "7a", "num": 54}, {"semId": "8b", "num": 79}, {"semId": "8b", "num": 2}, {"semId": "8b", "num": 6}, {"semId": "7a", "num": 5}],
+      "comparison": [
+        {"phrase": "get up", "meaning": "起床"},
+        {"phrase": "get dressed", "meaning": "穿好衣服 = be dressed"},
+        {"phrase": "get lost", "meaning": "迷路"},
+        {"phrase": "get over", "meaning": "克服；从…中恢复"},
+        {"phrase": "get into", "meaning": "进入；迷上（养成习惯）"},
+        {"phrase": "get to know", "meaning": "逐渐了解"}
+      ],
+      "commonMistakes": [
+        {"wrong": "Get up the difficulty.", "right": "Get over the difficulty.", "explain": "克服困难=get over，不与get up混淆"}
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "pit-306",
+      "title": "turn 家族 — turn on/off/around → turn up/down（延伸）",
+      "category": "一词多义",
+      "phrases": [{"semId": "7b", "num": 16}, {"semId": "8b", "num": 18}, {"semId": "8a", "num": 8}],
+      "comparison": [
+        {"phrase": "turn on", "meaning": "打开（电器/水龙头）"},
+        {"phrase": "turn off", "meaning": "关闭（电器/水龙头）"},
+        {"phrase": "turn up", "meaning": "调高（音量）；出现"},
+        {"phrase": "turn down", "meaning": "调低（音量）；拒绝"},
+        {"phrase": "turn around", "meaning": "转身"}
+      ],
+      "commonMistakes": [
+        {"wrong": "Turn on the radio louder. / Turn off the TV a bit.", "right": "Turn up the radio. / Turn down the TV.", "explain": "调音量用 turn up/down；开/关用 turn on/off"}
+      ],
+      "testExample": {"type": "选择题", "question": "The music is too loud. Please ___.", "options": ["A. turn it off", "B. turn it down", "C. turn it on", "D. turn it up"], "answer": "B"},
+      "difficulty": 2
+    },
+    {
+      "id": "pit-307",
+      "title": "come 家族 — come out/across/true/up with/along",
+      "category": "一词多义",
+      "phrases": [{"semId": "7b", "num": 98}, {"semId": "9a", "num": 17}, {"semId": "9a", "num": 8}, {"semId": "9b", "num": 24}, {"semId": "8b", "num": 88}],
+      "comparison": [
+        {"phrase": "come out", "meaning": "出来；出版；开花", "eg": "Her new book came out last month."},
+        {"phrase": "come across", "meaning": "偶然遇到 = run into", "eg": "I came across an old photo."},
+        {"phrase": "come true", "meaning": "实现（梦想成真）", "eg": "His dream came true."},
+        {"phrase": "come up with", "meaning": "想出（主意）= think of", "eg": "come up with a good idea"},
+        {"phrase": "come along", "meaning": "跟着来；进展", "eg": "Come along with me."}
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "pit-308",
+      "title": "go 家族 — go + doing 结构 / go off/wrong/through/away",
+      "category": "一词多义",
+      "phrases": [{"semId": "7a", "num": 25}, {"semId": "8a", "num": 19}, {"semId": "8a", "num": 58}, {"semId": "8b", "num": 63}, {"semId": "8b", "num": 68}, {"semId": "9a", "num": 28}, {"semId": "7b", "num": 94}],
+      "comparison": [
+        {"phrase": "go + doing", "meaning": "去做（户外/娱乐）活动", "eg": "go hiking/swimming/shopping/boating/fishing"},
+        {"phrase": "go off", "meaning": "（闹钟）响了；爆炸", "eg": "The alarm went off at 7."},
+        {"phrase": "go wrong", "meaning": "出故障；出错", "eg": "Something went wrong with the computer."},
+        {"phrase": "go through", "meaning": "经历；仔细检查", "eg": "go through difficulties"},
+        {"phrase": "go away", "meaning": "走开；离开"}
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "pit-309",
+      "title": "think about vs think of — 考虑 vs 想起",
+      "category": "一词多义",
+      "phrases": [{"semId": "7b", "num": 22}, {"semId": "7b", "num": 83}],
+      "comparison": [
+        {"phrase": "think about", "meaning": "考虑（= consider，斟酌/权衡）", "eg": "I'm thinking about whether to go."},
+        {"phrase": "think of", "meaning": "想起；认为（= come up with / have an opinion）", "eg": "I can't think of his name. / What do you think of the movie?"}
+      ],
+      "commonMistakes": [
+        {"wrong": "I'm thinking of changing my job. → 这个句子其实两个都可以，但考试中 think about 强调'考虑的过程'，think of 更偏向'突然想到'或'评价'"}
+      ],
+      "testExample": {"type": "选择题", "question": "What do you ___ the new teacher?", "options": ["A. think about", "B. think of", "C. think over"], "answer": "B", "explain": "What...think of... = 觉得…怎么样（固定句型）"},
+      "difficulty": 3
+    },
+    {
+      "id": "pit-310",
+      "title": "hear from vs hear of — 收到来信 vs 听说过",
+      "category": "一词多义",
+      "phrases": [{"semId": "8b", "num": 74}, {"semId": "8b", "num": 80}],
+      "comparison": [
+        {"phrase": "hear from sb", "meaning": "收到某人的来信/消息", "eg": "I haven't heard from my parents for a month."},
+        {"phrase": "hear of sth/sb", "meaning": "听说过（知道有这个东西/人）", "eg": "Have you ever heard of the Silk Road?"},
+        {"phrase": "hear about sth", "meaning": "听说关于某事（知道详情）", "eg": "I heard about the accident on the news."}
+      ],
+      "testExample": {"type": "选择题", "question": "—Have you ever ___ Gongbao chicken? —Yes, I often ___ my mother. She cooks it well.", "options": ["A. heard of; hear about", "B. heard from; hear of", "C. heard of; hear from", "D. heard about; hear from"], "answer": "C"},
+      "difficulty": 3
+    },
+
+    {
+      "id": "pit-401",
+      "title": "be good at vs be good with — at 技能 vs with 人际/工具",
+      "category": "介词搭配辨析",
+      "phrases": [{"semId": "7a", "num": 40}, {"semId": "7a", "num": 37}],
+      "comparison": [
+        {"phrase": "be good at (doing) sth", "meaning": "擅长（某技能/学科）", "eg": "She is good at math / singing."},
+        {"phrase": "be good with sb/sth", "meaning": "善于和…相处 / 善于使用…", "eg": "He is good with children / computers."}
+      ],
+      "testExample": {"type": "选择题", "question": "Mr. Wang is good ___ kids. He is also good ___ playing basketball.", "options": ["A. at; at", "B. with; at", "C. with; with", "D. at; with"], "answer": "B"},
+      "difficulty": 2
+    },
+    {
+      "id": "pit-402",
+      "title": "be different from vs be similar to — 反义但介词不同",
+      "category": "介词搭配辨析",
+      "phrases": [{"semId": "7a", "num": 33}, {"semId": "7a", "num": 35}],
+      "comparison": [
+        {"phrase": "be different from", "meaning": "与…不同", "prep": "from"},
+        {"phrase": "be similar to", "meaning": "与…相似", "prep": "to"}
+      ],
+      "commonMistakes": [
+        {"wrong": "be different to / be similar with", "right": "be different from / be similar to"}
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "pit-403",
+      "title": "be full of vs be filled with — 同义但结构不同",
+      "category": "介词搭配辨析",
+      "phrases": [{"semId": "7b", "num": 30}],
+      "comparison": [
+        {"phrase": "be full of sth", "meaning": "充满…（状态）", "structure": "be full of + n."},
+        {"phrase": "be filled with sth", "meaning": "被…填满（动作→状态）", "structure": "be filled with + n."}
+      ],
+      "commonMistakes": [
+        {"wrong": "The bottle is full with water. / The bottle is filled of water.", "right": "full of / filled with"}
+      ],
+      "testExample": {"type": "同义句转换", "question": "The room is full of people. = The room ___ ___ ___ people.", "answer": "is filled with"},
+      "difficulty": 2
+    },
+    {
+      "id": "pit-404",
+      "title": "be tired of vs be tired from — 厌倦 vs 因…累",
+      "category": "介词搭配辨析",
+      "phrases": [{"semId": "8a", "num": 68}],
+      "comparison": [
+        {"phrase": "be tired of", "meaning": "对…感到厌倦/厌烦", "eg": "I'm tired of eating the same food every day."},
+        {"phrase": "be tired from", "meaning": "因（做某事）而感到疲劳", "eg": "I'm tired from working all day."}
+      ],
+      "testExample": {"type": "选择题", "question": "I'm ___ this boring job. / I'm ___ running 10 kilometers.", "options": ["A. tired of; tired from", "B. tired from; tired of", "C. tired of; tired of", "D. tired from; tired from"], "answer": "A"},
+      "difficulty": 3
+    },
+    {
+      "id": "pit-405",
+      "title": "be late for / be absent from / be on time — 固定介词",
+      "category": "介词搭配辨析",
+      "phrases": [{"semId": "7b", "num": 11}, {"semId": "7b", "num": 18}, {"semId": "7b", "num": 12}],
+      "comparison": [
+        {"phrase": "be late for", "prep": "for", "eg": "Don't be late for school."},
+        {"phrase": "be absent from", "prep": "from", "eg": "He was absent from the meeting."},
+        {"phrase": "be on time", "prep": "on（此处on time是固定短语）", "eg": "Please be on time."}
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "pit-406",
+      "title": "be proud of vs take pride in — 同义介词不同",
+      "category": "介词搭配辨析",
+      "phrases": [{"semId": "8b", "num": 45}],
+      "comparison": [
+        {"phrase": "be proud of", "prep": "of", "eg": "I'm proud of you."},
+        {"phrase": "take pride in", "prep": "in", "eg": "I take pride in my work."}
+      ],
+      "testExample": {"type": "同义句转换", "question": "She is proud of her son. = She ___ ___ ___ her son.", "answer": "takes pride in"},
+      "difficulty": 3
+    },
+    {
+      "id": "pit-407",
+      "title": "be familiar with vs be familiar to — with 主动 vs to 被动",
+      "category": "介词搭配辨析",
+      "phrases": [{"semId": "8b", "num": 96}],
+      "comparison": [
+        {"phrase": "sb be familiar with sth", "meaning": "某人对某事熟悉", "eg": "I am familiar with this area."},
+        {"phrase": "sth be familiar to sb", "meaning": "某事对某人来说是熟悉的", "eg": "This song is familiar to me."}
+      ],
+      "difficulty": 3
+    },
+
+    {
+      "id": "pit-501",
+      "title": "in the end vs at the end of — 副词 vs 介词短语",
+      "category": "时间/方位介词辨析",
+      "phrases": [{"semId": "7b", "num": 103}, {"semId": "7b", "num": 73}],
+      "comparison": [
+        {"phrase": "in the end", "pos": "副词短语", "meaning": "最终、最后（= finally / at last）", "usage": "独立使用，不接 of", "eg": "In the end, we found the way home."},
+        {"phrase": "at the end of", "pos": "介词短语", "meaning": "在…的末尾/尽头", "usage": "at the end of + 名词", "eg": "at the end of the road / the month"}
+      ],
+      "testExample": {"type": "选择题", "question": "___ we solved the problem. / There is a hospital ___ the street.", "options": ["A. In the end; at the end of", "B. At the end; in the end of", "C. In the end; in the end of", "D. At the end of; at the end of"], "answer": "A"},
+      "difficulty": 3
+    },
+    {
+      "id": "pit-502",
+      "title": "in time vs on time — 及时 vs 准时",
+      "category": "时间/方位介词辨析",
+      "phrases": [{"semId": "8b", "num": 85}],
+      "comparison": [
+        {"phrase": "in time", "meaning": "及时（赶上了，没迟到）", "eg": "We got to the station just in time to catch the train."},
+        {"phrase": "on time", "meaning": "准时/按时（= punctually）", "eg": "The train arrived on time."}
+      ],
+      "testExample": {"type": "选择题", "question": "The doctor arrived just ___ to save the patient's life.", "options": ["A. on time", "B. in time", "C. at time", "D. by time"], "answer": "B", "explain": "及时赶到救了命→in time"},
+      "difficulty": 3
+    },
+    {
+      "id": "pit-503",
+      "title": "at night — 为什么 night 用 at 而 morning 用 in？",
+      "category": "时间/方位介词辨析",
+      "phrases": [{"semId": "7a", "num": 23}],
+      "comparison": [
+        {"phrase": "at night", "prep": "at（特例！）", "note": "night 用 at，不用 in"},
+        {"phrase": "in the morning/afternoon/evening", "prep": "in", "note": "morning/afternoon/evening 用 in"},
+        {"phrase": "at weekends", "prep": "at", "note": "英式用法；美式 on weekends"},
+        {"phrase": "at noon/midnight/dawn", "prep": "at", "note": "一天中的点时间用 at"}
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "pit-504",
+      "title": "at first vs first of all — 起初 vs 首先",
+      "category": "时间/方位介词辨析",
+      "phrases": [{"semId": "7b", "num": 88}],
+      "comparison": [
+        {"phrase": "at first", "meaning": "起初（暗示后来变了）", "eg": "At first I didn't like him, but later we became friends."},
+        {"phrase": "first of all", "meaning": "首先（用于列举，不暗示变化）", "eg": "First of all, let me introduce myself."}
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "pit-505",
+      "title": "from now on vs from then on — 时态差异",
+      "category": "时间/方位介词辨析",
+      "phrases": [{"semId": "8b", "num": 26}],
+      "comparison": [
+        {"phrase": "from now on", "meaning": "从现在起（用将来时）", "eg": "From now on, I will study harder."},
+        {"phrase": "from then on", "meaning": "从那时起（用过去时）", "eg": "From then on, he never lied again."}
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "pit-506",
+      "title": "in front of vs in the front of — 外部前面 vs 内部前部",
+      "category": "时间/方位介词辨析",
+      "phrases": [{"semId": "7a", "num": 27}],
+      "comparison": [
+        {"phrase": "in front of", "meaning": "在…（外部）前面", "eg": "There is a tree in front of the house."},
+        {"phrase": "in the front of", "meaning": "在…（内部）前部", "eg": "The driver sits in the front of the car."}
+      ],
+      "testExample": {"type": "选择题", "question": "The blackboard is ___ the classroom.", "options": ["A. in front of", "B. in the front of", "C. at the front of"], "answer": "B", "explain": "黑板在教室内部的前面→in the front of"},
+      "difficulty": 3
+    },
+
+    {
+      "id": "pit-601",
+      "title": "not only...but also... — 倒装考点",
+      "category": "连词与时态/语序",
+      "phrases": [{"semId": "8b", "num": 53}],
+      "comparison": [
+        {"phrase": "not only...but also...", "meaning": "不仅…而且…", "key": "Not only 置于句首时，该分句要倒装", "eg": "Not only does he like music, but he also plays the piano."}
+      ],
+      "commonMistakes": [
+        {"wrong": "Not only he likes music, but also he plays the piano.", "right": "Not only does he like music, but he also plays the piano.", "explain": "Not only 在句首→部分倒装（助动词提前）"}
+      ],
+      "testExample": {"type": "句型转换", "question": "He not only sings well but also dances well. → Not only ___ ___ ___ well, but he also dances well.", "answer": "does he sing"},
+      "difficulty": 3
+    },
+    {
+      "id": "pit-602",
+      "title": "so...that... vs such...that... — 经典必考",
+      "category": "连词与时态/语序",
+      "phrases": [{"semId": "8b", "num": 69}],
+      "comparison": [
+        {"phrase": "so + adj/adv + that", "meaning": "如此…以至于…", "eg": "He runs so fast that nobody can catch him."},
+        {"phrase": "such + (a/an) + n + that", "meaning": "如此…以至于…", "eg": "He is such a fast runner that nobody can catch him."}
+      ],
+      "testExample": {"type": "选择题", "question": "It was ___ fine weather that we decided to go hiking.", "options": ["A. so", "B. such", "C. so a", "D. such a"], "answer": "B", "explain": "weather 不可数→such（无a）；若说 such a fine day（可数）也对"},
+      "difficulty": 3
+    },
+    {
+      "id": "pit-603",
+      "title": "neither...nor... — 就近原则",
+      "category": "连词与时态/语序",
+      "phrases": [{"semId": "9a", "num": 63}],
+      "comparison": [
+        {"phrase": "neither...nor...", "meaning": "既不…也不…", "key": "就近原则：谓语动词与 nor 后的主语一致", "eg": "Neither he nor I am wrong."}
+      ],
+      "commonMistakes": [
+        {"wrong": "Neither he nor I are wrong.", "right": "Neither he nor I am wrong.", "explain": "nor 后是 I→用 am"},
+        {"wrong": "Neither I nor he are wrong.", "right": "Neither I nor he is wrong.", "explain": "nor 后是 he→用 is"}
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "pit-604",
+      "title": "as soon as / as long as — 主将从现",
+      "category": "连词与时态/语序",
+      "phrases": [{"semId": "8b", "num": 60}, {"semId": "8a", "num": 81}],
+      "comparison": [
+        {"phrase": "as soon as", "meaning": "一…就…", "rule": "时间状语从句→主将从现", "eg": "I will call you as soon as I arrive."},
+        {"phrase": "as long as", "meaning": "只要", "rule": "条件状语从句→主将从现", "eg": "I will go as long as you go with me."}
+      ],
+      "commonMistakes": [
+        {"wrong": "I will call you as soon as I will arrive.", "right": "I will call you as soon as I arrive.", "explain": "as soon as 引导的从句用一般现在时表将来"}
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "pit-605",
+      "title": "only if vs if only — 语序不同，意思天差地别",
+      "category": "连词与时态/语序",
+      "phrases": [{"semId": "7b", "num": 97}],
+      "comparison": [
+        {"phrase": "only if", "meaning": "只有…才（= only when，真实条件）", "eg": "You can go only if you finish your homework."},
+        {"phrase": "if only", "meaning": "要是…就好了（虚拟语气，表达遗憾/愿望）", "eg": "If only I had studied harder!"}
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "pit-606",
+      "title": "by the time — 完成时态触发器",
+      "category": "连词与时态/语序",
+      "phrases": [{"semId": "8b", "num": 65}],
+      "comparison": [
+        {"phrase": "by the time + 过去时间", "meaning": "到…时（已经）", "rule": "主句用过去完成时", "eg": "By the time I arrived, the movie had started."},
+        {"phrase": "by the time + 将来时间", "meaning": "到…时（将已经）", "rule": "主句用将来完成时", "eg": "By the time you arrive, I will have finished."}
+      ],
+      "difficulty": 3
+    },
+
+    {
+      "id": "pit-701",
+      "title": "get dressed — dress 是及物动词的特殊用法",
+      "category": "形态变化易错",
+      "phrases": [{"semId": "7a", "num": 54}],
+      "comparison": [
+        {"phrase": "get dressed", "meaning": "穿好衣服", "note": "= be dressed = put on clothes。dress 是过去分词作表语"},
+        {"phrase": "dress oneself", "meaning": "自己穿衣服", "note": "dress 是及物动词，宾语是人不是衣物"}
+      ],
+      "commonMistakes": [
+        {"wrong": "Get dress. / Dress clothes.", "right": "Get dressed. / Put on clothes.", "explain": "dress 的宾语是人（dress sb），不是衣服"}
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "pit-702",
+      "title": "take a photo vs take photos — 单数 vs 复数",
+      "category": "形态变化易错",
+      "phrases": [{"semId": "7a", "num": 65}, {"semId": "7a", "num": 51}],
+      "comparison": [
+        {"phrase": "take a photo", "meaning": "拍一张照片"},
+        {"phrase": "take photos", "meaning": "拍照（可能多张）"}
+      ],
+      "note": "同样模式：take a walk / take a shower / take a seat / take a deep breath 用单数；take notes 用复数"
+    },
+    {
+      "id": "pit-703",
+      "title": "congratulations on — 必须复数！",
+      "category": "形态变化易错",
+      "phrases": [{"semId": "8a", "num": 28}],
+      "comparison": [
+        {"phrase": "congratulations on sth", "meaning": "祝贺某事", "note": "必须用复数 congratulations！不可说 congratulation。"}
+      ],
+      "commonMistakes": [
+        {"wrong": "Congratulation on your success!", "right": "Congratulations on your success!"}
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "pit-704",
+      "title": "be in one's forties — 几十几岁的表达",
+      "category": "形态变化易错",
+      "phrases": [{"semId": "8b", "num": 76}],
+      "comparison": [
+        {"phrase": "in one's twenties / thirties / forties", "meaning": "在某人二十/三十/四十多岁时", "note": "整十数加 s，变 y 为 ie 再加 s"}
+      ],
+      "commonMistakes": [
+        {"wrong": "in his forty / in the forties", "right": "in his forties（四十多岁）/ in the forties（四十年代）"}
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "pit-705",
+      "title": "thousands of / hundreds of / millions of — 虚指 vs 实指",
+      "category": "形态变化易错",
+      "phrases": [{"semId": "8a", "num": 5}, {"semId": "9a", "num": 36}, {"semId": "9b", "num": 11}],
+      "comparison": [
+        {"phrase": "thousands of", "meaning": "成千上万的（虚指，+s +of）", "eg": "Thousands of people came."},
+        {"phrase": "two thousand", "meaning": "二千（实指，无s 无of）", "eg": "Two thousand people came."}
+      ],
+      "commonMistakes": [
+        {"wrong": "two thousands / two thousands of", "right": "two thousand（实指数字，不加s）"},
+        {"wrong": "thousand of", "right": "thousands of（虚指，要加s+of）"}
+      ],
+      "testExample": {"type": "改错", "question": "Two thousands of students took part in the activity.", "answer": "Two thousand students（去掉s和of）"},
+      "difficulty": 3
+    },
+    {
+      "id": "pit-706",
+      "title": "daily routines / do chores — 习惯用复数",
+      "category": "形态变化易错",
+      "phrases": [{"semId": "7a", "num": 59}, {"semId": "8b", "num": 56}],
+      "comparison": [
+        {"phrase": "daily routines", "note": "日常安排，routine 习惯用复数"},
+        {"phrase": "do chores", "note": "做家务，chore 习惯用复数"}
+      ],
+      "difficulty": 1
+    },
+
+    {
+      "id": "pit-801",
+      "title": "because of vs because — 介词 vs 连词",
+      "category": "形近/义近混淆",
+      "phrases": [{"semId": "7b", "num": 70}],
+      "comparison": [
+        {"phrase": "because of", "pos": "介词短语", "usage": "because of + 名词/代词/doing", "eg": "He was late because of the rain."},
+        {"phrase": "because", "pos": "连词", "usage": "because + 句子（主谓结构）", "eg": "He was late because it rained."}
+      ],
+      "testExample": {"type": "选择题", "question": "We stayed at home ___ the heavy rain. / We stayed at home ___ it rained heavily.", "options": ["A. because; because", "B. because of; because of", "C. because of; because", "D. because; because of"], "answer": "C"},
+      "difficulty": 2
+    },
+    {
+      "id": "pit-802",
+      "title": "instead of vs instead — 介词 vs 副词",
+      "category": "形近/义近混淆",
+      "phrases": [{"semId": "7b", "num": 101}],
+      "comparison": [
+        {"phrase": "instead of", "pos": "介词短语", "usage": "instead of + 名词/代词/doing", "eg": "Let's walk instead of taking a bus."},
+        {"phrase": "instead", "pos": "副词", "usage": "独立使用，放句首或句末", "eg": "He didn't take a bus. He walked instead."}
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "pit-803",
+      "title": "such as vs for example — 列举 vs 举例",
+      "category": "形近/义近混淆",
+      "phrases": [{"semId": "7b", "num": 54}, {"semId": "7a", "num": 63}],
+      "comparison": [
+        {"phrase": "such as", "usage": "例如（接名词/名词短语列举，不用逗号）", "eg": "I like sports such as basketball and tennis."},
+        {"phrase": "for example", "usage": "例如（接句子，通常有逗号）", "eg": "I like many sports. For example, I play basketball every weekend."}
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "pit-804",
+      "title": "at the moment vs at that moment — 现在进行时 vs 过去进行时",
+      "category": "时间/方位介词辨析",
+      "phrases": [{"semId": "7b", "num": 44}],
+      "comparison": [
+        {"phrase": "at the moment", "meaning": "此刻、现在", "tense": "常用于现在进行时", "eg": "She is sleeping at the moment."},
+        {"phrase": "at that moment", "meaning": "在那时", "tense": "常用于过去进行时", "eg": "At that moment, she was sleeping."}
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "pit-805",
+      "title": "so far — 现在完成时标志",
+      "category": "时间/方位介词辨析",
+      "phrases": [{"semId": "8b", "num": 11}],
+      "comparison": [
+        {"phrase": "so far", "meaning": "到目前为止（= up to now）", "tense": "现在完成时", "eg": "So far we have learned 100 phrases."}
+      ],
+      "commonMistakes": [
+        {"wrong": "So far we learned 100 phrases.", "right": "So far we have learned 100 phrases.", "explain": "so far 是现在完成时的标志词"}
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "pit-806",
+      "title": "in fact / as a result / for this reason — 副词连接语辨析",
+      "category": "形近/义近混淆",
+      "phrases": [{"semId": "8a", "num": 43}, {"semId": "8b", "num": 67}, {"semId": "8a", "num": 44}],
+      "comparison": [
+        {"phrase": "in fact", "meaning": "事实上（强调/纠正）"},
+        {"phrase": "as a result", "meaning": "结果（因果关系）"},
+        {"phrase": "for this reason", "meaning": "因此（原因→结果）"}
+      ],
+      "difficulty": 2
+    },
+
+    {
+      "id": "pit-901",
+      "title": "not…at all — 一点儿也不",
+      "category": "固定搭配·介词后接doing",
+      "phrases": [{"semId": "7b", "num": 10}],
+      "comparison": [
+        {"phrase": "not…at all", "meaning": "一点儿也不", "usage": "not + 动词/形容词 + at all", "eg": "I don't like it at all."}
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "pit-902",
+      "title": "quite a / quite a few — 强调限定词",
+      "category": "形近/义近混淆",
+      "phrases": [{"semId": "7b", "num": 9}],
+      "comparison": [
+        {"phrase": "quite a + 可数名词单数", "meaning": "真是一个… / 相当…", "eg": "That's quite a story!"}
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "pit-903",
+      "title": "pick up 多义 — 捡起 / 接人 / 学会",
+      "category": "一词多义",
+      "phrases": [{"semId": "7b", "num": 2}],
+      "comparison": [
+        {"phrase": "pick up", "meaning": "①捡起 ②(用车)接人 ③(无意中)学会 ④好转", "eg": "pick up the pen / pick me up at 5 / pick up some French / Business is picking up."}
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "pit-904",
+      "title": "drop off / drop out — 多义区分",
+      "category": "一词多义",
+      "phrases": [{"semId": "7b", "num": 56}, {"semId": "9a", "num": 6}],
+      "comparison": [
+        {"phrase": "drop off", "meaning": "①送（某人到某地）②打瞌睡 ③减少", "eg": "I'll drop you off at the station."},
+        {"phrase": "drop out (of)", "meaning": "退出；辍学", "eg": "He dropped out of school."}
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "pit-905",
+      "title": "go off 多义 — 闹钟响 / 爆炸 / 变质",
+      "category": "一词多义",
+      "phrases": [{"semId": "8b", "num": 63}],
+      "comparison": [
+        {"phrase": "go off", "meaning": "①（闹钟）响 ②爆炸 ③（食物）变质 ④离开", "eg": "The alarm went off. / The bomb went off. / The milk has gone off."}
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "pit-906",
+      "title": "make up 多义 — 和好 / 编造 / 组成 / 化妆",
+      "category": "一词多义",
+      "phrases": [{"semId": "8a", "num": 85}],
+      "comparison": [
+        {"phrase": "make up with sb", "meaning": "与某人和好"},
+        {"phrase": "make up a story", "meaning": "编造故事"},
+        {"phrase": "be made up of", "meaning": "由…组成"},
+        {"phrase": "make up one's face", "meaning": "化妆"}
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "pit-907",
+      "title": "fight against sb — 介词固定 with/against 辨析",
+      "category": "含sb/sth槽位结构",
+      "phrases": [{"semId": "8a", "num": 4}],
+      "comparison": [
+        {"phrase": "fight against sb/sth", "meaning": "与…作斗争、对抗…", "eg": "fight against the disease"},
+        {"phrase": "fight with sb", "meaning": "①与…打架/战斗 ②与…并肩作战（看上下文）", "eg": "fight with a friend / fight with the allies"}
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "pit-908",
+      "title": "worry about vs be worried about — 动词 vs 形容词",
+      "category": "形近/义近混淆",
+      "phrases": [{"semId": "8a", "num": 87}],
+      "comparison": [
+        {"phrase": "worry about", "pos": "动词短语", "eg": "Don't worry about me."},
+        {"phrase": "be worried about", "pos": "形容词短语", "eg": "I'm worried about you."}
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "pit-909",
+      "title": "put on vs wear vs dress — 穿上（动作）vs 穿着（状态）vs 给…穿衣",
+      "category": "一词多义",
+      "phrases": [{"semId": "7b", "num": 37}],
+      "comparison": [
+        {"phrase": "put on", "meaning": "穿上（动作）"},
+        {"phrase": "wear", "meaning": "穿着（状态）"},
+        {"phrase": "dress / get dressed", "meaning": "穿好衣服（dress+人）"}
+      ],
+      "testExample": {"type": "选择题", "question": "It's cold outside. Please ___ your coat. / She always ___ a red dress.", "options": ["A. put on; wears", "B. wear; puts on", "C. dress; puts on", "D. put on; dresses"], "answer": "A"},
+      "difficulty": 2
+    },
+    {
+      "id": "pit-910",
+      "title": "alone vs lonely — 客观独处 vs 主观孤独",
+      "category": "形近/义近混淆",
+      "phrases": [],
+      "comparison": [
+        {"phrase": "alone (adj/adv)", "meaning": "独自的（客观状态，不一定是负面）", "eg": "She lives alone but she doesn't feel lonely."},
+        {"phrase": "lonely (adj)", "meaning": "孤独的（主观感受，负面）", "eg": "He felt lonely in the big city."}
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "pit-911",
+      "title": "as...as... / not as(so)...as... — 同级比较",
+      "category": "连词与时态/语序",
+      "phrases": [],
+      "comparison": [
+        {"phrase": "as + adj/adv + as", "meaning": "和…一样", "eg": "He is as tall as his father."},
+        {"phrase": "not as(so) + adj/adv + as", "meaning": "不如…", "eg": "He is not as tall as his father."}
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "pit-912",
+      "title": "have to vs must — 客观必须 vs 主观必须",
+      "category": "形近/义近混淆",
+      "phrases": [{"semId": "7b", "num": 13}],
+      "comparison": [
+        {"phrase": "have to", "meaning": "不得不（客观需要/外部要求）", "eg": "I have to go now. It's getting dark."},
+        {"phrase": "must", "meaning": "必须（主观认为/内在义务）", "eg": "I must study hard for the exam."}
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "pit-913",
+      "title": "more than / less than — 比较句型（可与 no more than 对比）",
+      "category": "形态变化易错",
+      "phrases": [{"semId": "7a", "num": 49}],
+      "comparison": [
+        {"phrase": "more than", "meaning": "多于、超过", "eg": "more than 100 people"},
+        {"phrase": "less than", "meaning": "少于", "eg": "less than 10 minutes"},
+        {"phrase": "no more than", "meaning": "仅仅、只有（= only，强调少）", "eg": "He has no more than 10 dollars."},
+        {"phrase": "not more than", "meaning": "不超过、至多（= at most）", "eg": "He has not more than 10 dollars."}
+      ],
+      "difficulty": 3
+    }
+  ]
+}

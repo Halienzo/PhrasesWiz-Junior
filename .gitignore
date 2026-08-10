@@ -1,0 +1,15 @@
+# Tool/config directories
+.claude/
+.playwright-mcp/
+.zcode/
+.remember/
+
+# Duplicate/backup files
+index - 副本.html
+index - 副本 (2).html
+
+# Source text files (not needed for running the app)
+verb phrases 7-9.txt
+
+# Build artifacts (optional - keep if you want to reference them)
+# build.js, template.js, cn-mapping.js are source; optionally exclude data.json if embedded in HTML

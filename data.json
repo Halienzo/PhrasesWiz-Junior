@@ -8138,11 +8138,11 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "这只受伤的小狗有"
+                "text": "这只受伤的小狗"
               },
               {
                 "type": "phrase",
-                "text": "危险"
+                "text": "有危险"
               },
               {
                 "type": "text",
@@ -13895,15 +13895,11 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "我希望将来"
-              },
-              {
-                "type": "text",
-                "text": "有"
+                "text": "我希望"
               },
               {
                 "type": "phrase",
-                "text": "一天"
+                "text": "将来有一天"
               },
               {
                 "type": "text",
@@ -13935,12 +13931,8 @@
             ],
             "cnSegments": [
               {
-                "type": "text",
-                "text": "有"
-              },
-              {
                 "type": "phrase",
-                "text": "朝一日"
+                "text": "有朝一日"
               },
               {
                 "type": "text",
@@ -35548,12 +35540,8 @@
                 "text": "一点点善意会很"
               },
               {
-                "type": "text",
-                "text": "有"
-              },
-              {
                 "type": "phrase",
-                "text": "用"
+                "text": "有用"
               },
               {
                 "type": "text",

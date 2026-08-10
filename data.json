@@ -2469,15 +2469,15 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "去年暑假，我们去梅里雪"
+                "text": "去年暑假，我们"
               },
               {
                 "type": "phrase",
-                "text": "山"
+                "text": "去"
               },
               {
                 "type": "text",
-                "text": "脚下的雨崩村"
+                "text": "梅里雪山脚下的雨崩村"
               },
               {
                 "type": "phrase",
@@ -8585,15 +8585,7 @@
               },
               {
                 "type": "phrase",
-                "text": "是"
-              },
-              {
-                "type": "text",
-                "text": "项"
-              },
-              {
-                "type": "phrase",
-                "text": "相当"
+                "text": "是项相当"
               },
               {
                 "type": "text",
@@ -12644,15 +12636,7 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "虽然云南和北京都在东八区，但昆明实际上比北京晚一个小"
-              },
-              {
-                "type": "phrase",
-                "text": "时"
-              },
-              {
-                "type": "text",
-                "text": "天黑，所以傍晚七点你还能在滇池边看日落。"
+                "text": "虽然云南和北京都在东八区，但昆明实际上比北京晚一个小时天黑，所以傍晚七点你还能在滇池边看日落。"
               }
             ]
           },
@@ -20654,15 +20638,15 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "在虎跳峡徒步结束后，一位好心的傈僳族大哥主动让"
+                "text": "在虎跳峡徒步结束后，一位好心的傈僳族大哥主动让我"
               },
               {
                 "type": "phrase",
-                "text": "我"
+                "text": "搭他的顺风车"
               },
               {
                 "type": "text",
-                "text": "搭他的顺风车回丽江市区。"
+                "text": "回丽江市区。"
               }
             ]
           },
@@ -21989,15 +21973,7 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "独龙族纹面女阿婆缓缓抬起布满岁月痕迹的"
-              },
-              {
-                "type": "phrase",
-                "text": "手"
-              },
-              {
-                "type": "text",
-                "text": "，"
+                "text": "独龙族纹面女阿婆缓缓抬起布满岁月痕迹的手，"
               },
               {
                 "type": "phrase",
@@ -30101,15 +30077,7 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "亚洲象监测塔发"
-              },
-              {
-                "type": "phrase",
-                "text": "出"
-              },
-              {
-                "type": "text",
-                "text": "的声波能温和地"
+                "text": "亚洲象监测塔发出的声波能温和地"
               },
               {
                 "type": "phrase",
@@ -30311,12 +30279,8 @@
             ],
             "cnSegments": [
               {
-                "type": "phrase",
-                "text": "火"
-              },
-              {
                 "type": "text",
-                "text": "把节上，彝族长老用火镰点燃圣火，巨大的火把瞬间"
+                "text": "火把节上，彝族长老用火镰点燃圣火，巨大的火把瞬间"
               },
               {
                 "type": "phrase",
@@ -36682,15 +36646,7 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "在怒江的傈僳族村寨，每逢节日，年轻"
-              },
-              {
-                "type": "phrase",
-                "text": "人"
-              },
-              {
-                "type": "text",
-                "text": "都会把最好的食物先敬给"
+                "text": "在怒江的傈僳族村寨，每逢节日，年轻人都会把最好的食物先敬给"
               },
               {
                 "type": "phrase",

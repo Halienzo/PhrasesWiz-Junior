@@ -4147,11 +4147,7 @@
             "cnSegments": [
               {
                 "type": "phrase",
-                "text": "将"
-              },
-              {
-                "type": "text",
-                "text": "来"
+                "text": "将来"
               },
               {
                 "type": "text",
@@ -4493,11 +4489,7 @@
               },
               {
                 "type": "phrase",
-                "text": "下"
-              },
-              {
-                "type": "text",
-                "text": "起了"
+                "text": "下起了"
               },
               {
                 "type": "phrase",
@@ -12132,11 +12124,7 @@
               },
               {
                 "type": "phrase",
-                "text": "等"
-              },
-              {
-                "type": "text",
-                "text": "一下"
+                "text": "等一下"
               },
               {
                 "type": "text",
@@ -13709,11 +13697,11 @@
                 "text": "雨太大了，我们"
               },
               {
-                "type": "text",
-                "text": "待在"
+                "type": "phrase",
+                "text": "待"
               },
               {
-                "type": "phrase",
+                "type": "text",
                 "text": "家里"
               },
               {
@@ -14393,12 +14381,8 @@
                 "text": "赢了比赛后，队员们"
               },
               {
-                "type": "text",
-                "text": "情绪"
-              },
-              {
                 "type": "phrase",
-                "text": "很高"
+                "text": "情绪很高"
               },
               {
                 "type": "text",
@@ -14439,11 +14423,11 @@
               },
               {
                 "type": "phrase",
-                "text": "情绪"
+                "text": "情绪高涨"
               },
               {
                 "type": "text",
-                "text": "高涨，因为在云南已经很多年没见过它了。"
+                "text": "，因为在云南已经很多年没见过它了。"
               }
             ]
           },
@@ -17201,12 +17185,8 @@
                 "text": "雨停后，太阳"
               },
               {
-                "type": "text",
-                "text": "出"
-              },
-              {
                 "type": "phrase",
-                "text": "来了"
+                "text": "出来了"
               },
               {
                 "type": "text",
@@ -18951,12 +18931,8 @@
                 "text": "这"
               },
               {
-                "type": "text",
-                "text": "只"
-              },
-              {
                 "type": "phrase",
-                "text": "不过"
+                "text": "只不过"
               },
               {
                 "type": "text",
@@ -19323,12 +19299,8 @@
                 "text": "别站在"
               },
               {
-                "type": "text",
-                "text": "太阳"
-              },
-              {
                 "type": "phrase",
-                "text": "底下"
+                "text": "太阳底下"
               },
               {
                 "type": "text",
@@ -24533,15 +24505,7 @@
               },
               {
                 "type": "phrase",
-                "text": "一"
-              },
-              {
-                "type": "text",
-                "text": "把"
-              },
-              {
-                "type": "phrase",
-                "text": "一把地"
+                "text": "一把一把地"
               },
               {
                 "type": "text",
@@ -26058,11 +26022,11 @@
                 "text": "今晚"
               },
               {
-                "type": "text",
+                "type": "phrase",
                 "text": "来"
               },
               {
-                "type": "phrase",
+                "type": "text",
                 "text": "我家"
               },
               {
@@ -27209,11 +27173,7 @@
               },
               {
                 "type": "phrase",
-                "text": "查"
-              },
-              {
-                "type": "text",
-                "text": "出"
+                "text": "查出"
               },
               {
                 "type": "text",
@@ -27246,11 +27206,7 @@
               },
               {
                 "type": "phrase",
-                "text": "找"
-              },
-              {
-                "type": "text",
-                "text": "出"
+                "text": "找出"
               },
               {
                 "type": "text",
@@ -31321,11 +31277,7 @@
               },
               {
                 "type": "phrase",
-                "text": "消除"
-              },
-              {
-                "type": "text",
-                "text": "了"
+                "text": "消除了"
               },
               {
                 "type": "phrase",
@@ -34867,12 +34819,8 @@
                 "text": "我的电脑"
               },
               {
-                "type": "text",
-                "text": "出"
-              },
-              {
                 "type": "phrase",
-                "text": "故障"
+                "text": "出故障"
               },
               {
                 "type": "text",
@@ -34904,12 +34852,8 @@
                 "text": "在发射低空物流无人机时，若导航系统稍微"
               },
               {
-                "type": "text",
-                "text": "出"
-              },
-              {
                 "type": "phrase",
-                "text": "点差错"
+                "text": "出点差错"
               },
               {
                 "type": "text",
@@ -35764,12 +35708,8 @@
                 "text": "《消失的地平线》让香格里拉闻名于世，它是一本值得慢慢品味的"
               },
               {
-                "type": "text",
-                "text": "好"
-              },
-              {
                 "type": "phrase",
-                "text": "书"
+                "text": "好书"
               },
               {
                 "type": "text",

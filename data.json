@@ -2734,6 +2734,10 @@
               },
               {
                 "type": "phrase",
+                "text": "在"
+              },
+              {
+                "type": "phrase",
                 "text": "对面"
               },
               {
@@ -2764,6 +2768,10 @@
               {
                 "type": "text",
                 "text": "新建的云南AI算力中心正好在云南民族博物馆的"
+              },
+              {
+                "type": "phrase",
+                "text": "在"
               },
               {
                 "type": "phrase",
@@ -4317,7 +4325,11 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "请安静，我们正在"
+                "text": "请安静，我们正"
+              },
+              {
+                "type": "phrase",
+                "text": "在"
               },
               {
                 "type": "phrase",
@@ -10220,7 +10232,11 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "卫生间在"
+                "text": "卫生间"
+              },
+              {
+                "type": "phrase",
+                "text": "在"
               },
               {
                 "type": "phrase",
@@ -10253,7 +10269,11 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "那个设有低空飞行器起降坪和智能快递柜的综合服务站就在"
+                "text": "在大理古城，一个设有共享充电宝和快递柜的综合服务站就"
+              },
+              {
+                "type": "phrase",
+                "text": "在"
               },
               {
                 "type": "phrase",
@@ -10261,7 +10281,7 @@
               },
               {
                 "type": "text",
-                "text": "，你可以去那儿取无人机送来的包裹。"
+                "text": "，游客们可以在这里休息、充电、寄送特产。"
               }
             ]
           },
@@ -46948,7 +46968,11 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "我妈妈在"
+                "text": "我妈妈"
+              },
+              {
+                "type": "phrase",
+                "text": "在"
               },
               {
                 "type": "phrase",
@@ -47029,7 +47053,11 @@
             "cnSegments": [
               {
                 "type": "text",
-                "text": "这些名画正在"
+                "text": "这些名画正"
+              },
+              {
+                "type": "phrase",
+                "text": "在"
               },
               {
                 "type": "phrase",

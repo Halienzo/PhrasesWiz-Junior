@@ -5674,11 +5674,11 @@
               },
               {
                 "type": "phrase",
-                "text": "起"
+                "text": "起了床"
               },
               {
                 "type": "text",
-                "text": "了床，扛着摄影器材爬上了笔架山顶。"
+                "text": "，扛着摄影器材爬上了笔架山顶。"
               }
             ]
           },
@@ -12693,11 +12693,7 @@
             "cnSegments": [
               {
                 "type": "phrase",
-                "text": "全"
-              },
-              {
-                "type": "text",
-                "text": "世界"
+                "text": "全世界"
               },
               {
                 "type": "text",
@@ -24876,11 +24872,11 @@
               },
               {
                 "type": "phrase",
-                "text": "尽"
+                "text": "尽了最大努力"
               },
               {
                 "type": "text",
-                "text": "了最大努力，不仅保护了梯田，也保护了滋养梯田千年的森林和水系。"
+                "text": "，不仅保护了梯田，也保护了滋养梯田千年的森林和水系。"
               }
             ]
           },
@@ -29996,11 +29992,7 @@
               },
               {
                 "type": "text",
-                "text": "出"
-              },
-              {
-                "type": "phrase",
-                "text": "门"
+                "text": "出门"
               },
               {
                 "type": "text",
@@ -31188,11 +31180,7 @@
             "cnSegments": [
               {
                 "type": "phrase",
-                "text": "以"
-              },
-              {
-                "type": "text",
-                "text": "后"
+                "text": "以后"
               },
               {
                 "type": "text",
@@ -31225,11 +31213,7 @@
               },
               {
                 "type": "phrase",
-                "text": "今"
-              },
-              {
-                "type": "text",
-                "text": "后"
+                "text": "今后"
               },
               {
                 "type": "text",
@@ -35067,11 +35051,11 @@
               },
               {
                 "type": "phrase",
-                "text": "坐"
+                "text": "坐起"
               },
               {
                 "type": "text",
-                "text": "起，冲出去查看情况。"
+                "text": "，冲出去查看情况。"
               }
             ]
           },

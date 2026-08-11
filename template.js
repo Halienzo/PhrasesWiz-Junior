@@ -472,12 +472,16 @@ input.dict-input.wrong-anim{animation:shake .4s ease}
 
 <script>
 const PHRASES_DATA = ${phrasesJsonStr};
+window.PHRASES_DATA = PHRASES_DATA;
+const DATA = PHRASES_DATA; // 兼容 app.js 旧引用
 </script>
 <script>
 const POS_DATA = ${posJsonStr};
+window.POS_DATA = POS_DATA;
 </script>
 <script>
 const MC_DATA = ${mcJsonStr};
+window.MC_DATA = MC_DATA;
 </script>
 <script>
 const PITFALLS = ${pitfallsJsonStr};

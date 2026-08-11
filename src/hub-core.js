@@ -41,18 +41,8 @@ function saveHubProgress(key, data) { localStorage.setItem(key, JSON.stringify(d
 function $(id) { return document.getElementById(id); }
 
 // ---------- 公共工具函数 ----------
-const RE_ELL = /…/g;
-const RE_DOTS = /\.{2,}/g;
-const RE_WS = /\s+/g;
-
-function normalize(s) {
-  return (s || '').toString().trim().toLowerCase()
-    .replace(RE_ELL, '...').replace(RE_DOTS, '...').replace(RE_WS, ' ');
-}
-
-function esc(s) {
-  return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-}
+// 注: normalize(), esc(), RE_ELL/DOTS/WS 由 app.js 提供（避免重复声明）
+// Hub 模块通过事件处理器在 app.js 加载完成后调用，因此使用 app.js 的版本
 
 // 检查词形填空答案（不区分大小写，空格容错）
 function checkFillAnswer(input, answer) {

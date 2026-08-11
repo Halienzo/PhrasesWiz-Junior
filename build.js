@@ -650,13 +650,46 @@ data.semesters.forEach(s => {
 fs.writeFileSync(path.join(__dirname, 'data.json'), JSON.stringify(data, null, 0), 'utf-8');
 console.log('\n已写出 data.json, 大小:', (fs.statSync(path.join(__dirname, 'data.json')).size / 1024).toFixed(1), 'KB');
 
+// ===== 生成 Hub HTML =====
 // 读入考点辨析数据
 const pitfallsJsonStr = fs.readFileSync(path.join(__dirname, 'pitfalls-data.json'), 'utf-8');
 
-// 生成 index.html（内嵌 JSON + app.js + pitfalls）
 const { buildHTML } = require('./template');
-const appJs = fs.readFileSync(path.join(__dirname, 'app.js'), 'utf-8');
-const dataJsonStr = JSON.stringify(data);
-const html = buildHTML(dataJsonStr, appJs, pitfallsJsonStr);
+
+// 拼接所有 JS 模块
+const jsModules = [
+  'src/hub-core.js',
+  'src/hub-home.js',
+  'src/hub-mole.js',
+  'src/hub-fission.js',
+];
+
+let appJsStr = '';
+for (const mod of jsModules) {
+  const modPath = path.join(__dirname, mod);
+  if (fs.existsSync(modPath)) {
+    appJsStr += '\n// ===== ' + mod + ' =====\n';
+    appJsStr += fs.readFileSync(modPath, 'utf-8') + '\n';
+  } else {
+    console.warn('⚠ 模块文件不存在: ' + mod);
+  }
+}
+
+// 拼接原有 app.js（PhrasesWiz 现有逻辑）
+const phrasesAppJs = fs.readFileSync(path.join(__dirname, 'app.js'), 'utf-8');
+appJsStr += '\n// ===== app.js (PhrasesWiz Junior) =====\n';
+appJsStr += phrasesAppJs;
+
+// 在末尾触发初始渲染
+appJsStr += '\n// ===== 初始渲染（Hub 启动）=====\n';
+appJsStr += 'renderMain();\n';
+
+const phrasesJsonStr = JSON.stringify(data);
+const posJsonStr = JSON.stringify(posData);
+const mcJsonStr = JSON.stringify(mcData);
+
+const html = buildHTML(phrasesJsonStr, posJsonStr, mcJsonStr, appJsStr, pitfallsJsonStr);
 fs.writeFileSync(path.join(__dirname, 'index.html'), html, 'utf-8');
-console.log('已写出 index.html, 大小:', (fs.statSync(path.join(__dirname, 'index.html')).size / 1024).toFixed(1), 'KB');
+console.log('已写出 index.html (Hub 三板块), 大小:', (fs.statSync(path.join(__dirname, 'index.html')).size / 1024).toFixed(1), 'KB');
+console.log('\n=== 构建完成 ===');
+console.log('Find the Mole (' + mcData.batchCount + '批), Word Fission Mission (' + posData.batchCount + '批), PhrasesWiz Junior (' + data.meta.semesterCount + '学期)');

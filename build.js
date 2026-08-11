@@ -100,6 +100,122 @@ function parsePosCategories(desc) {
   return map;
 }
 
+// ===== mc.txt 解析器 =====
+function parseMcTxt(filePath) {
+  const raw = fs.readFileSync(filePath, 'utf-8');
+  const text = raw.replace(/\r\n?/g, '\n');
+  const batches = [];
+
+  // 按 "专项训练（N）" 拆分
+  const batchRegex = /云南省中考单选专项训练（(\d+)）([\s\S]*?)(?=云南省中考单选专项训练（\d+）|$)/g;
+  let bm;
+  while ((bm = batchRegex.exec(text)) !== null) {
+    const batchId = parseInt(bm[1], 10);
+    let block = bm[2].trim();
+
+    // 提取考点描述
+    const descMatch = block.match(/考点[^\n]*\n?([\s\S]*?)(?=\n?\d+\.\s)/);
+    const description = descMatch ? descMatch[1].trim().replace(/\n+/g, ' ').replace(/\s+/g, ' ') : '';
+
+    // 提取题目：按题号分割
+    const questions = [];
+    const qParts = block.split(/\n(?=\d+\.\s*\S)/);
+    for (const part of qParts) {
+      const qMatch = part.match(/^(\d+)\.\s*([\s\S]*?)(?=\n\s*(?:[A-D][.\s])|$)/);
+      if (!qMatch) continue;
+      const no = parseInt(qMatch[1], 10);
+      const stemBody = qMatch[2].trim();
+
+      // Extract options from remainder (after stem, before next question or answer)
+      let remainder = part.substring(qMatch[0].length);
+      // Strip answer section from remainder to avoid false option matches
+      const ansIdx = remainder.search(/\n\s*答案/);
+      if (ansIdx >= 0) remainder = remainder.substring(0, ansIdx);
+      const options = [];
+      const optRegex = /\n?\s*([A-D])[.\s]\s*([\s\S]*?)(?=\n?\s*[A-D][.\s]|$)/g;
+      let om;
+      while ((om = optRegex.exec(remainder)) !== null) {
+        options.push({ label: om[1], text: om[2].trim().replace(/\n/g, ' ').replace(/\s+/g, ' ') });
+      }
+
+      // Limit to 4 options (MC questions have exactly 4; prevents bleed from adjacent questions)
+      if (options.length > 4) options.length = 4;
+      if (options.length === 0) {
+        const looseOptRegex = /([A-D])[.\s、]\s*(\S[\s\S]*?)(?=\s*[A-D][.\s、]|$)/g;
+        let lom;
+        while ((lom = looseOptRegex.exec(remainder)) !== null) {
+          options.push({ label: lom[1], text: lom[2].trim().replace(/\n/g, ' ').replace(/\s+/g, ' ') });
+        }
+      }
+
+      const stem = stemBody.replace(/\n/g, ' ').replace(/\s+/g, ' ').trim();
+
+      questions.push({ no, stem, options });
+    }
+
+    // Special case for training 2 question 7 (missing "7." prefix)
+    if (batchId === 2 && !questions.find(q => q.no === 7)) {
+      const q7Match = block.match(/(?:^|\n)(Among all the dresses in the shop[\s\S]*?)(?=\n\s*\d+\.\s*\S|\n\s*答案)/);
+      if (q7Match) {
+        const q7Text = q7Match[0].trim();
+        const q7Options = [];
+        const q7OptRegex = /([A-D])[.\s]\s*([\s\S]*?)(?=\s*[A-D][.\s]|$)/g;
+        let o7m;
+        while ((o7m = q7OptRegex.exec(q7Text)) !== null) {
+          q7Options.push({ label: o7m[1], text: o7m[2].trim().replace(/\n/g, ' ').replace(/\s+/g, ' ') });
+        }
+        const stem7 = q7Text.split(/\n\s*A[.\s]/)[0].replace(/\n/g, ' ').replace(/\s+/g, ' ').trim();
+        questions.splice(6, 0, { no: 7, stem: stem7, options: q7Options });
+      }
+    }
+
+    // 提取答案
+    const ansSection = block.match(/答案[：:\s]*([\s\S]*?)$/);
+    const ansText = ansSection ? ansSection[1].replace(/\n/g, ' ').replace(/\s+/g, ' ') : '';
+
+    const ansMap = {};
+    // Format 1: "1-5. ABACB" or "1-5: ABACB" or "1—5：A A B C C"
+    const rangeRegex = /(\d+)\s*[-—]\s*(\d+)[.\s:：、]*([A-D\s]+)/g;
+    let rm;
+    while ((rm = rangeRegex.exec(ansText)) !== null) {
+      const start = parseInt(rm[1], 10);
+      const end = parseInt(rm[2], 10);
+      const letters = rm[3].replace(/\s/g, '').split('');
+      for (let i = 0; i < letters.length && start + i <= end; i++) {
+        ansMap[start + i] = letters[i];
+      }
+    }
+    // Format 2: "1.A2.B3.C..." (tight concatenation without spacing)
+    const tightRegex = /(\d+)[.\s、]*([A-D])/g;
+    let tm;
+    while ((tm = tightRegex.exec(ansText)) !== null) {
+      const n = parseInt(tm[1], 10);
+      if (!ansMap[n]) ansMap[n] = tm[2];
+    }
+
+    // 组装
+    const qs = questions.map(q => ({
+      ...q,
+      answer: ansMap[q.no] || '',
+    }));
+
+    batches.push({
+      id: batchId,
+      title: `云南省中考单选专项训练（${batchId}）`,
+      shortTitle: `训练${batchId}`,
+      description,
+      questions: qs,
+      count: qs.length,
+    });
+  }
+
+  return {
+    batches,
+    totalQuestions: batches.reduce((s, b) => s + b.count, 0),
+    batchCount: batches.length,
+  };
+}
+
 // ---------- 学期定义（基于深度分析的行号） ----------
 // 每个学期: 短语区 [phraseStart, phraseEnd) + 训练题区
 // 训练题每个 section 的题目行/答案行（1-based）
@@ -472,6 +588,19 @@ posData.batches.forEach(b => {
   console.log(`  [训练${b.id}] ${b.title}: ${b.count} 题`);
   const missingAns = b.questions.filter(q => !q.answer);
   if (missingAns.length) console.log(`    ⚠ 无答案题号: ${missingAns.map(q => q.no).join(', ')}`);
+});
+
+// 解析 mc.txt
+const mcData = parseMcTxt(path.join(__dirname, 'mc.txt'));
+console.log('\n=== mc.txt 解析报告 ===');
+console.log('批次数:', mcData.batchCount, '(预期 8)');
+console.log('题目总数:', mcData.totalQuestions, '(预期 80)');
+mcData.batches.forEach(b => {
+  console.log(`  [训练${b.id}] ${b.title}: ${b.count} 题`);
+  const missingAns = b.questions.filter(q => !q.answer);
+  const missingOpts = b.questions.filter(q => q.options.length < 4);
+  if (missingAns.length) console.log(`    ⚠ 无答案题号: ${missingAns.map(q => q.no).join(', ')}`);
+  if (missingOpts.length) console.log(`    ⚠ 选项不足4个题号: ${missingOpts.map(q => q.no).join(', ')}`);
 });
 
 const data = { semesters: [], meta: {} };

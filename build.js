@@ -13,6 +13,93 @@ const lines = raw.replace(/\r\n?/g, '\n').split('\n');
 // 中文对应词映射表（用于在中文例句中高亮英文短语的对应中文）
 const CN_MAPPING = require('./cn-mapping');
 
+// ===== pos.txt 解析器 =====
+function parsePosTxt(filePath) {
+  const raw = fs.readFileSync(filePath, 'utf-8');
+  const text = raw.replace(/\r\n?/g, '\n');
+  const batches = [];
+
+  // 按 "专项训练（N）" 拆分
+  const batchRegex = /云南省中考单句词形填空专项训练（(\d+)）([\s\S]*?)(?=云南省中考单句词形填空专项训练（\d+）|$)/g;
+  let bm;
+  while ((bm = batchRegex.exec(text)) !== null) {
+    const batchId = parseInt(bm[1], 10);
+    const block = bm[2].trim();
+
+    // 提取考点描述
+    const descMatch = block.match(/考点设置[参考：:\s]*([\s\S]*?)(?=\d+\.\s)/);
+    const description = descMatch ? descMatch[1].trim().replace(/\n+/g, ' ') : '';
+
+    // 提取题目: \d+\. 句子 (hint)
+    const questions = [];
+    const qRegex = /(\d+)\.\s+(.+?)\((\w+)\)/g;
+    let qm;
+    while ((qm = qRegex.exec(block)) !== null) {
+      questions.push({
+        no: parseInt(qm[1], 10),
+        sentence: qm[2].trim().replace(/\s+/g, ' '),
+        hint: qm[3].trim(),
+      });
+    }
+
+    // 提取答案块
+    const ansBlockMatch = block.match(/答案[：:\s]*([\s\S]*?)$/);
+    const ansBlock = ansBlockMatch ? ansBlockMatch[1] : '';
+    // 匹配 "1. relaxing" 或 "1.relaxing" 或 "1 relaxing"
+    // 答案可能连写（如 "1. relaxing2. moving"），用非贪婪捕获+前瞻截止到下一个数字
+    const ansRegex = /(\d+)[.\s、]+(.+?)(?=\d+[.\s、]|$)/g;
+    const ansMap = {};
+    let am;
+    while ((am = ansRegex.exec(ansBlock)) !== null) {
+      ansMap[parseInt(am[1], 10)] = am[2].trim();
+    }
+
+    // 组装
+    const qs = questions.map(q => ({
+      ...q,
+      answer: ansMap[q.no] || '',
+    }));
+
+    // 考点归类（从 description 提取）
+    const catMap = parsePosCategories(description);
+    qs.forEach(q => {
+      q.category = catMap[q.no] || '';
+    });
+
+    batches.push({
+      id: batchId,
+      title: `云南省中考单句词形填空专项训练（${batchId}）`,
+      shortTitle: `训练${batchId}`,
+      description,
+      questions: qs,
+      count: qs.length,
+    });
+  }
+
+  return {
+    batches,
+    totalQuestions: batches.reduce((s, b) => s + b.count, 0),
+    batchCount: batches.length,
+  };
+}
+
+// 从考点描述解析各题考点归类
+function parsePosCategories(desc) {
+  const map = {};
+  // 匹配 "1-5. 词性转换（动词→形容词）" 等
+  const re = /(\d+)-(\d+)[.\s、]+(.+?)(?=\d+-\d+|\s*$)/g;
+  let m;
+  while ((m = re.exec(desc)) !== null) {
+    const start = parseInt(m[1], 10);
+    const end = parseInt(m[2], 10);
+    const cat = m[3].trim();
+    for (let i = start; i <= end; i++) {
+      map[i] = cat;
+    }
+  }
+  return map;
+}
+
 // ---------- 学期定义（基于深度分析的行号） ----------
 // 每个学期: 短语区 [phraseStart, phraseEnd) + 训练题区
 // 训练题每个 section 的题目行/答案行（1-based）
@@ -376,6 +463,17 @@ function assignUnitsToPhrases(phrases, trainings) {
 }
 
 // ---------- 主流程 ----------
+// 解析 pos.txt
+const posData = parsePosTxt(path.join(__dirname, 'pos.txt'));
+console.log('=== pos.txt 解析报告 ===');
+console.log('批次数:', posData.batchCount, '(预期 4)');
+console.log('题目总数:', posData.totalQuestions, '(预期 100)');
+posData.batches.forEach(b => {
+  console.log(`  [训练${b.id}] ${b.title}: ${b.count} 题`);
+  const missingAns = b.questions.filter(q => !q.answer);
+  if (missingAns.length) console.log(`    ⚠ 无答案题号: ${missingAns.map(q => q.no).join(', ')}`);
+});
+
 const data = { semesters: [], meta: {} };
 let totalPhrases = 0, totalQuestions = 0;
 

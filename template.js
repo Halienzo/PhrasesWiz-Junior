@@ -1,7 +1,7 @@
 // template.js — 提供 index.html 的 HTML/CSS 骨架
 // JS 应用逻辑从 app.js 读取后注入，避免模板字符串消费正则反斜杠
 
-function buildHTML(dataJsonStr, appJs, pitfallsJsonStr) {
+function buildHTML(phrasesJsonStr, posJsonStr, mcJsonStr, appJsStr, pitfallsJsonStr) {
   return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -350,36 +350,140 @@ input.dict-input.wrong-anim{animation:shake .4s ease}
   .type-card .type-ex .ex-analysis{margin-left:0}
   .pit-mistakes .mistake-row{flex-direction:column;gap:4px}
 }
+
+/* ===== Hub 首页 ===== */
+.hub-container{max-width:960px;margin:0 auto;padding:20px 16px}
+.hub-brand{text-align:center;padding:40px 20px 30px}
+.brand-main{margin-bottom:8px}
+.brand-cn{font-size:42px;font-weight:900;letter-spacing:4px;background:linear-gradient(135deg,#C8A84E 0%,#B8942E 50%,#D4AF37 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:brandBreathe 4s ease-in-out infinite}
+@keyframes brandBreathe{0%,100%{transform:scale(1);filter:drop-shadow(0 0 8px rgba(200,168,78,.4))}50%{transform:scale(1.04);filter:drop-shadow(0 0 20px rgba(184,148,46,.7))}}
+.brand-en{font-size:22px;font-style:italic;font-family:Georgia,"Times New Roman",serif;color:#B8942E;letter-spacing:1.5px;margin-bottom:20px;opacity:.9}
+[data-theme="dark"] .brand-en{color:#D4AF37}
+.brand-motto{margin-top:10px}
+.motto-cn{font-size:18px;color:var(--text-muted);margin:0 0 6px;font-family:"Microsoft YaHei","PingFang SC",sans-serif}
+.motto-en{font-size:15px;color:var(--text-muted);font-style:italic;font-family:Georgia,"Times New Roman",serif;margin:0;opacity:.8}
+.hub-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:0 10px 40px}
+@media(max-width:900px){.hub-cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.hub-cards{grid-template-columns:1fr}}
+.hub-card{background:var(--surface);border:2px solid var(--border);border-radius:16px;padding:28px 20px;text-align:center;cursor:pointer;transition:all .3s ease;position:relative;overflow:hidden}
+.hub-card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,0,0,.15)}
+.hub-card-mole:hover{border-color:#1a56db;box-shadow:0 12px 40px rgba(26,86,219,.25),0 0 60px rgba(6,182,212,.1)}
+.hub-card-fission:hover{border-color:#7c3aed;box-shadow:0 12px 40px rgba(124,58,237,.25),0 0 60px rgba(16,185,129,.1)}
+.hub-card-phrases:hover{border-color:#FF8C00;box-shadow:0 12px 40px rgba(255,140,0,.25),0 0 60px rgba(255,20,147,.1)}
+.card-icon{font-size:56px;margin-bottom:12px;line-height:1;transition:transform .3s ease}
+.hub-card:hover .card-icon{transform:scale(1.15)}
+.mole-icon .icon-inner{animation:moleWiggle 1.5s ease-in-out infinite;display:inline-block}
+@keyframes moleWiggle{0%,100%{transform:rotate(0) translateY(0)}25%{transform:rotate(-8deg) translateY(-3px)}75%{transform:rotate(8deg) translateY(-3px)}}
+.fission-icon .icon-inner{animation:fissionSpin 2.5s linear infinite;display:inline-block}
+@keyframes fissionSpin{0%{transform:rotate(0) scale(1)}50%{transform:rotate(180deg) scale(1.2)}100%{transform:rotate(360deg) scale(1)}}
+.phrases-icon .icon-inner{animation:phrasesBounce 2s ease-in-out infinite;display:inline-block}
+@keyframes phrasesBounce{0%,100%{transform:rotate(0) translateY(0)}25%{transform:rotate(90deg) translateY(-6px)}50%{transform:rotate(180deg) translateY(0)}75%{transform:rotate(270deg) translateY(-6px)}}
+.card-title{font-size:19px;font-weight:800;margin-bottom:4px;color:var(--text)}
+.card-subtitle{font-size:15px;font-weight:600;color:var(--text-muted);margin-bottom:10px}
+.card-desc{font-size:13px;color:var(--text-muted);margin-bottom:8px;line-height:1.5}
+.card-stats{font-size:12px;color:var(--text-muted);background:var(--tag-bg);display:inline-block;padding:3px 12px;border-radius:10px}
+
+/* ===== 顶栏系统 ===== */
+.topbar{position:sticky;top:0;z-index:100;padding:8px 14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--border);box-shadow:var(--shadow);transition:background .3s,box-shadow .3s}
+.topbar-hub{background:var(--surface);border-bottom:1px solid transparent;box-shadow:none}
+.topbar-mole{background:linear-gradient(135deg,#1a2a4a 0%,#1a3a5c 100%);border-bottom-color:#1a56db;color:#e0e8f0}
+.topbar-fission{background:linear-gradient(135deg,#2a1a4a 0%,#1a2a3a 100%);border-bottom-color:#7c3aed;color:#e0d8f0}
+.topbar-phrases{background:var(--surface)}
+[data-theme="dark"] .topbar-mole{background:linear-gradient(135deg,#0a1528 0%,#0f1f35 100%)}
+[data-theme="dark"] .topbar-fission{background:linear-gradient(135deg,#150828 0%,#0f1528 100%)}
+.topbar-spacer{flex:1;min-width:0}
+.topbar-brand-mini{font-size:16px;font-weight:700;color:#B8942E;letter-spacing:2px}
+.topbar-title{font-size:16px;font-weight:700;white-space:nowrap}
+.btn-back{padding:4px 12px;font-size:13px;border-radius:6px;cursor:pointer;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.2);color:inherit}
+.btn-back:hover{background:rgba(255,255,255,.25)}
+.batch-tabs{display:flex;gap:4px;flex-wrap:wrap}
+.batch-tab{padding:4px 10px;font-size:12px;border-radius:5px;cursor:pointer;background:transparent;border:1px solid rgba(255,255,255,.2);color:inherit;white-space:nowrap}
+.batch-tab.active{background:rgba(255,255,255,.25);border-color:rgba(255,255,255,.4);font-weight:700}
+.batch-tab:hover{background:rgba(255,255,255,.15)}
+.btn-mode{padding:4px 10px;font-size:12px;border-radius:5px;cursor:pointer;background:transparent;border:1px solid rgba(255,255,255,.2);color:inherit}
+.btn-mode.active{background:rgba(255,255,255,.3);border-color:rgba(255,255,255,.5);font-weight:700}
+.btn-mode:hover{background:rgba(255,255,255,.2)}
+.topbar-mole .icon-btn,.topbar-mole .btn-mode,.topbar-mole .batch-tab,.topbar-fission .icon-btn,.topbar-fission .btn-mode,.topbar-fission .batch-tab{color:#e0e8f0}
+.topbar-mole .icon-btn:hover,.topbar-fission .icon-btn:hover{color:#fff}
+
+/* ===== Mole 板块 ===== */
+.score-panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:10px 16px;margin:10px 0 16px;display:flex;align-items:center;gap:8px;font-size:14px}
+.score-value{font-weight:800;color:var(--accent);font-size:18px}
+.score-pct{color:var(--text-muted);font-size:13px}
+.questions-list{max-width:900px;margin:0 auto}
+.mole-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;margin-bottom:12px;transition:border-color .2s}
+.mole-card.mole-correct{border-color:var(--ok);border-left:4px solid var(--ok)}
+.mole-card.mole-wrong{border-color:var(--danger);border-left:4px solid var(--danger)}
+.mole-head{display:flex;gap:8px;margin-bottom:10px}
+.q-stem{font-size:15px;line-height:1.6}
+.mole-options{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+@media(max-width:600px){.mole-options{grid-template-columns:1fr}}
+.mole-opt{display:flex;align-items:center;gap:8px;padding:8px 12px;border:1.5px solid var(--border);border-radius:8px;background:var(--surface);cursor:pointer;text-align:left;transition:all .15s;font-size:14px;font-family:inherit}
+.mole-opt:hover:not(:disabled){border-color:var(--accent);background:rgba(26,115,232,.04)}
+.mole-opt.mole-selected{border-color:var(--accent);background:rgba(26,115,232,.08);font-weight:600}
+.mole-opt.mole-ans-correct{border-color:var(--ok);background:rgba(24,128,56,.1);font-weight:700}
+.mole-opt.mole-ans-correct .opt-label{color:var(--ok)}
+.mole-opt.mole-ans-wrong{border-color:var(--danger);background:rgba(217,48,37,.08)}
+.mole-opt.mole-ans-wrong .opt-label{color:var(--danger)}
+.mole-opt:disabled{cursor:default;opacity:.85}
+.opt-label{font-weight:700;font-size:15px;min-width:22px;color:var(--accent)}
+.opt-text{flex:1}
+.submit-bar{text-align:center;padding:20px;margin-top:10px}
+.btn-submit{padding:10px 32px;font-size:16px;font-weight:700;background:var(--accent);color:#fff;border:none;border-radius:8px;cursor:pointer;transition:all .2s}
+.btn-submit:hover{opacity:.9;transform:scale(1.03);color:#fff}
+
+/* ===== Fission 板块 ===== */
+.fission-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;margin-bottom:12px;transition:border-color .2s}
+.fission-card.fission-correct{border-color:var(--ok);border-left:4px solid var(--ok)}
+.fission-card.fission-wrong{border-color:var(--danger);border-left:4px solid var(--danger)}
+.fission-head{display:flex;gap:6px;align-items:flex-start;flex-wrap:wrap}
+.q-hint{font-size:12px;color:var(--text-muted);white-space:nowrap}
+.fission-input{font-family:inherit;font-size:14px;padding:4px 10px;border:1.5px solid var(--accent);border-radius:6px;background:var(--surface);color:var(--text);min-width:140px;max-width:200px;transition:all .15s}
+.fission-input:focus{outline:none;box-shadow:0 0 0 3px rgba(26,115,232,.15)}
+.fission-input.correct{border-color:var(--ok);background:rgba(24,128,56,.06)}
+.fission-input.wrong{border-color:var(--danger);background:rgba(217,48,37,.06)}
+.fission-input[readonly]{cursor:default}
+
+/* ===== Phrases 嵌入 Hub 后样式适配 ===== */
+#mainContent > header{position:static;top:auto;z-index:auto;margin-bottom:16px;border-radius:var(--radius)}
+
+/* ===== Hub 首页移动端适配 ===== */
+@media(max-width:600px){
+  .brand-cn{font-size:28px;letter-spacing:2px}
+  .brand-en{font-size:17px}
+  .motto-cn{font-size:15px}
+  .motto-en{font-size:13px}
+  .hub-card{padding:20px 14px}
+  .card-title{font-size:16px}
+  .topbar{padding:6px 10px;gap:6px}
+  .topbar-title{font-size:14px}
+  .batch-tab{padding:3px 7px;font-size:11px}
+  .btn-mode{padding:3px 7px;font-size:11px}
+}
 </style>
 </head>
 <body>
-<header>
-  <div class="header-row">
-    <span class="title"><span class="title-icon">✨</span><span class="title-main">Phrases</span><span class="title-wiz">Wiz</span><span class="title-junior">Junior</span><span class="title-cn">· 短语精灵</span></span>
-    <div class="sem-tabs" id="semTabs"></div>
-    <span class="spacer"></span>
-    <input type="text" class="search-box" id="searchBox" placeholder="🔍 搜索短语/中文/词性...">
-    <span class="progress-mini" id="progressMini"></span>
-    <button class="icon-btn" id="themeBtn" title="深色模式">🌙</button>
-  </div>
-  <div class="mode-tabs" id="modeTabs"></div>
-</header>
+<header id="topBar"></header>
 
-<main>
-  <div id="appBody"></div>
-</main>
+<main id="mainContent"></main>
 
 <div class="toast" id="toast"></div>
 <div class="print-area" id="printArea" style="display:none"></div>
 
 <script>
-const DATA = ${dataJsonStr};
+const PHRASES_DATA = ${phrasesJsonStr};
+</script>
+<script>
+const POS_DATA = ${posJsonStr};
+</script>
+<script>
+const MC_DATA = ${mcJsonStr};
 </script>
 <script>
 const PITFALLS = ${pitfallsJsonStr};
 </script>
 <script>
-${appJs}
+${appJsStr}
 </script>
 </body>
 </html>`;

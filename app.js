@@ -1208,32 +1208,83 @@ document.addEventListener('click', e => {
   if (t.classList.contains('pit-badge')) { state.mode = 'pitfalls'; state.pitfallCatFilter = 'all'; state.sidebarOpen = false; navigateToPitfall(t.dataset.pitid); renderAll(); return; }
 });
 
-// ===== 顶部控件 =====
-document.getElementById('searchBox').addEventListener('input', e => { state.search = e.target.value; if (state.mode === 'learn' || state.mode === 'flash' || state.mode === 'en2cn' || state.mode === 'cn2en') renderAppBody(); });
+// ===== 顶部控件（仅在独立运行或 phrases 视图激活时绑定）=====
+(function() {
+  var searchBox = document.getElementById('searchBox');
+  if (searchBox) {
+    searchBox.addEventListener('input', function(e) { state.search = e.target.value; if (state.mode === 'learn' || state.mode === 'flash' || state.mode === 'en2cn' || state.mode === 'cn2en') renderAppBody(); });
+  }
+})();
+
 document.addEventListener('input', e => {
   if (e.target.id === 'pitfallSearchBox') { state.pitfallSearch = e.target.value; state.pitfallShowAnswers = {}; renderAppBody(); }
 });
-document.getElementById('themeBtn').addEventListener('click', () => {
-  const cur = document.documentElement.getAttribute('data-theme');
-  const next = cur === 'dark' ? 'light' : 'dark';
-  document.documentElement.setAttribute('data-theme', next);
-  document.getElementById('themeBtn').textContent = next === 'dark' ? '☀️' : '🌙';
-  localStorage.setItem('vp79_theme', next);
-});
-const savedTheme = localStorage.getItem('vp79_theme');
-if (savedTheme) { document.documentElement.setAttribute('data-theme', savedTheme); document.getElementById('themeBtn').textContent = savedTheme === 'dark' ? '☀️' : '🌙'; }
 
-// 快捷键
-document.addEventListener('keydown', e => {
+// 主题按钮（仅独立运行时绑定，Hub 核心已处理）
+(function() {
+  if (typeof HUB !== 'undefined') return;
+  var themeBtn = document.getElementById('themeBtn');
+  if (themeBtn) {
+    themeBtn.addEventListener('click', function() {
+      var cur = document.documentElement.getAttribute('data-theme');
+      var next = cur === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      themeBtn.textContent = next === 'dark' ? '☀️' : '🌙';
+      localStorage.setItem('vp79_theme', next);
+    });
+  }
+})();
+
+// 主题初始化（仅在独立运行时，Hub 核心已处理）
+(function() {
+  if (typeof HUB !== 'undefined') return;
+  var savedTheme = localStorage.getItem('vp79_theme');
+  if (savedTheme) { document.documentElement.setAttribute('data-theme', savedTheme); }
+})();
+
+// 快捷键（所有模式通用，保留）
+document.addEventListener('keydown', function(e) {
   if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+  if (typeof state === 'undefined') return;
   if (state.mode === 'flash') {
     if (e.code === 'Space') { e.preventDefault(); flipFlash(); }
     else if (e.code === 'ArrowRight') { nextFlash(1); }
     else if (e.code === 'ArrowLeft') { nextFlash(-1); }
   }
-  // Enter key for fill/cn2en now handled per-input via renderAppBody
-  if (e.code === 'Enter' && state.mode === 'fill') { /* handled per-input */ }
 });
 
-renderAll();
+// ===== Hub 集成: PhrasesWiz Junior 作为 Hub 的一个视图 =====
+
+// 设为全局引用（Hub 首页卡片统计需要）
+window.PHRASES_DATA = DATA;
+
+// renderPhrasesView — Hub 调用入口
+function renderPhrasesView() {
+  // Hub 顶栏（由 renderMain 调用 renderTopBar 后进入本函数）
+  renderTopBar();
+  // 重建 phrases 内部结构到 mainContent
+  var main = document.getElementById('mainContent');
+  if (!main) { renderAll(); return; }
+  main.innerHTML = '<header>' +
+    '<div class="header-row">' +
+      '<span class="title"><span class="title-icon">✨</span><span class="title-main">Phrases</span><span class="title-wiz">Wiz</span><span class="title-junior">Junior</span><span class="title-cn">· 短语精灵</span></span>' +
+      '<div class="sem-tabs" id="semTabs"></div>' +
+      '<span class="spacer"></span>' +
+      '<input type="text" class="search-box" id="searchBox" placeholder="🔍 搜索短语/中文/词性...">' +
+      '<span class="progress-mini" id="progressMini"></span>' +
+    '</div>' +
+    '<div class="mode-tabs" id="modeTabs"></div>' +
+  '</header>' +
+  '<div id="appBody"></div>' +
+  '<div class="toast" id="toast"></div>' +
+  '<div class="print-area" id="printArea" style="display:none"></div>';
+  // 运行 phrases 内部渲染
+  renderAll();
+}
+
+// 仅在非 Hub 环境（独立运行时）自动初始化
+// Hub 环境下由 hub-core.js 的 renderMain 驱动
+if (typeof HUB === 'undefined') {
+  renderAll();
+}
 

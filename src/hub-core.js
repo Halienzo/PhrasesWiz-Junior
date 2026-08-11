@@ -65,7 +65,7 @@ function renderTopBar() {
   if (!bar) return;
   if (HUB.view === 'hub') {
     bar.className = 'topbar topbar-hub';
-    bar.innerHTML = '<span class="topbar-brand-mini">无畏无瑕</span><span class="topbar-spacer"></span><button class="icon-btn" id="themeBtn" title="深色模式">🌙</button>';
+    bar.innerHTML = '<span class="topbar-spacer"></span>';
   } else {
     const themes = {
       mole: 'topbar-mole',
@@ -95,7 +95,6 @@ function renderTopBar() {
       html += '<button class="btn-mode' + (state.mode === 'exam' ? ' active' : '') + '" data-hubmode="exam">📝 考试</button>';
     }
 
-    html += '<button class="icon-btn" id="themeBtn" title="深色模式">🌙</button>';
     bar.innerHTML = html;
   }
   syncThemeBtn();

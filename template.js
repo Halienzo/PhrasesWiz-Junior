@@ -355,13 +355,13 @@ input.dict-input.wrong-anim{animation:shake .4s ease}
 .hub-container{max-width:960px;margin:0 auto;padding:20px 16px}
 .hub-brand{text-align:center;padding:40px 20px 30px}
 .brand-main{margin-bottom:8px}
-.brand-cn{font-size:42px;font-weight:900;letter-spacing:4px;background:linear-gradient(135deg,#C8A84E 0%,#B8942E 50%,#D4AF37 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:brandBreathe 4s ease-in-out infinite}
-@keyframes brandBreathe{0%,100%{transform:scale(1);filter:drop-shadow(0 0 8px rgba(200,168,78,.4))}50%{transform:scale(1.04);filter:drop-shadow(0 0 20px rgba(184,148,46,.7))}}
-.brand-en{font-size:22px;font-style:italic;font-family:Georgia,"Times New Roman",serif;color:#B8942E;letter-spacing:1.5px;margin-bottom:20px;opacity:.9}
-[data-theme="dark"] .brand-en{color:#D4AF37}
+.brand-cn{font-size:42px;font-weight:900;letter-spacing:4px;background:linear-gradient(135deg,#FF6B35 0%,#FF8C00 50%,#FFA500 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:brandBreathe 3.5s ease-in-out infinite}
+@keyframes brandBreathe{0%,100%{transform:scale(1);filter:drop-shadow(0 0 8px rgba(255,107,53,.4))}50%{transform:scale(1.04);filter:drop-shadow(0 0 20px rgba(255,140,0,.7))}}
+.brand-en{font-size:22px;font-style:italic;font-family:Georgia,"Times New Roman",serif;background:linear-gradient(135deg,#FF6B35 0%,#FF8C00 50%,#FFA500 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;letter-spacing:1.5px;margin-bottom:20px;animation:brandBreathe 3.5s ease-in-out infinite}
 .brand-motto{margin-top:10px}
-.motto-cn{font-size:18px;color:var(--text-muted);margin:0 0 6px;font-family:"Microsoft YaHei","PingFang SC",sans-serif}
-.motto-en{font-size:15px;color:var(--text-muted);font-style:italic;font-family:Georgia,"Times New Roman",serif;margin:0;opacity:.8}
+.motto-cn{font-size:18px;color:#FF8C00;margin:0 0 6px;font-family:"Microsoft YaHei","PingFang SC",sans-serif;animation:mottoBreathe 3s ease-in-out infinite;text-shadow:0 0 10px rgba(255,140,0,.3)}
+.motto-en{font-size:15px;color:#FF8C00;font-style:italic;font-family:Georgia,"Times New Roman",serif;margin:0;animation:mottoBreathe 3s ease-in-out infinite .3s;text-shadow:0 0 8px rgba(255,140,0,.25)}
+@keyframes mottoBreathe{0%,100%{opacity:1}50%{opacity:.7}}
 .hub-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:0 10px 40px}
 @media(max-width:900px){.hub-cards{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.hub-cards{grid-template-columns:1fr}}
@@ -405,6 +405,15 @@ input.dict-input.wrong-anim{animation:shake .4s ease}
 .btn-mode:hover{background:rgba(255,255,255,.2)}
 .topbar-mole .icon-btn,.topbar-mole .btn-mode,.topbar-mole .batch-tab,.topbar-fission .icon-btn,.topbar-fission .btn-mode,.topbar-fission .batch-tab{color:#e0e8f0}
 .topbar-mole .icon-btn:hover,.topbar-fission .icon-btn:hover{color:#fff}
+
+/* ===== 浮动主题按钮（全设备右下角固定，含安全区适配）===== */
+.theme-float{position:fixed;bottom:28px;right:28px;z-index:999;width:48px;height:48px;border-radius:50%;border:2px solid var(--border);background:var(--surface);color:var(--text);font-size:22px;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.18);transition:all .25s;display:flex;align-items:center;justify-content:center;padding:0;line-height:1;animation:floatPulse 3s ease-in-out infinite}
+@keyframes floatPulse{0%,100%{box-shadow:0 4px 16px rgba(0,0,0,.18)}50%{box-shadow:0 4px 22px rgba(26,115,232,.25)}}
+.theme-float:hover{transform:scale(1.12);box-shadow:0 6px 24px rgba(0,0,0,.28);border-color:var(--accent);animation:none}
+[data-theme="dark"] .theme-float{box-shadow:0 4px 16px rgba(0,0,0,.5)}
+[data-theme="dark"] .theme-float:hover{box-shadow:0 6px 28px rgba(138,180,248,.35)}
+@media(max-width:1024px){.theme-float{bottom:24px;right:24px;width:46px;height:46px;font-size:21px}}
+@media(max-width:600px){.theme-float{bottom:max(20px, env(safe-area-inset-bottom, 16px));right:max(16px, env(safe-area-inset-right, 16px));width:44px;height:44px;font-size:20px}}
 
 /* ===== Mole 板块 ===== */
 .score-panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:10px 16px;margin:10px 0 16px;display:flex;align-items:center;gap:8px;font-size:14px}
@@ -466,6 +475,8 @@ input.dict-input.wrong-anim{animation:shake .4s ease}
 <header id="topBar"></header>
 
 <main id="mainContent"></main>
+
+<button class="theme-float" id="themeBtn" title="亮/暗模式">🌙</button>
 
 <div class="toast" id="toast"></div>
 <div class="print-area" id="printArea" style="display:none"></div>

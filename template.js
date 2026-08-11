@@ -251,6 +251,22 @@ input.q-input.wrong-anim{animation:shake .4s ease}
 input.dict-input.correct-anim{animation:pulseGreen .5s ease}
 input.dict-input.wrong-anim{animation:shake .4s ease}
 .q-feedback.fadeInUp,.dict-fb.fadeInUp{animation:fadeInUp .35s ease}
+/* ===== Mole/Fission 答题动画与音效反馈 ===== */
+.mole-card.correct-anim{animation:cardPulseGreen .5s ease}
+.mole-card.wrong-anim{animation:cardShake .4s ease}
+.mole-opt.opt-bounce{animation:scaleBounce .4s ease}
+.mole-opt.opt-reveal{animation:fadeInUp .3s ease .25s both}
+.fission-input.correct-anim{animation:pulseGreen .5s ease}
+.fission-input.wrong-anim{animation:shake .4s ease}
+.fission-card.correct-anim{animation:cardPulseGreen .5s ease}
+.fission-card.wrong-anim{animation:cardShake .4s ease}
+.score-value.pop{animation:scorePop .35s ease}
+.mole-card.reveal,.fission-card.reveal{opacity:0;animation:cardReveal .35s ease forwards}
+@keyframes cardPulseGreen{0%{box-shadow:0 0 0 0 rgba(129,201,149,.5)}50%{box-shadow:0 0 0 12px rgba(129,201,149,0)}100%{box-shadow:0 0 0 0 rgba(129,201,149,0)}}
+@keyframes cardShake{0%,100%{transform:translateX(0)}20%{transform:translateX(-5px)}40%{transform:translateX(5px)}60%{transform:translateX(-3px)}80%{transform:translateX(3px)}}
+@keyframes scorePop{0%{transform:scale(1)}50%{transform:scale(1.35);color:var(--accent)}100%{transform:scale(1)}}
+@keyframes scaleBounce{0%{transform:scale(1)}40%{transform:scale(1.08)}70%{transform:scale(.96)}100%{transform:scale(1)}}
+@keyframes cardReveal{0%{opacity:0;transform:translateY(10px)}100%{opacity:1;transform:translateY(0)}}
 
 /* ===== 考点辨析模块 (Pitfalls) ===== */
 .pitfalls-layout{display:grid;grid-template-columns:240px 1fr;gap:20px;align-items:start}
@@ -355,9 +371,9 @@ input.dict-input.wrong-anim{animation:shake .4s ease}
 .hub-container{max-width:960px;margin:0 auto;padding:20px 16px}
 .hub-brand{text-align:center;padding:40px 20px 30px}
 .brand-main{margin-bottom:8px}
-.brand-cn{font-size:42px;font-weight:900;letter-spacing:4px;background:linear-gradient(135deg,#FF6B35 0%,#FF8C00 50%,#FFA500 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:brandBreathe 3.5s ease-in-out infinite}
-@keyframes brandBreathe{0%,100%{transform:scale(1);filter:drop-shadow(0 0 8px rgba(255,107,53,.4))}50%{transform:scale(1.04);filter:drop-shadow(0 0 20px rgba(255,140,0,.7))}}
-.brand-en{font-size:22px;font-style:italic;font-family:Georgia,"Times New Roman",serif;background:linear-gradient(135deg,#FF6B35 0%,#FF8C00 50%,#FFA500 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;letter-spacing:1.5px;margin-bottom:20px;animation:brandBreathe 3.5s ease-in-out infinite}
+.brand-cn{font-size:42px;font-weight:900;letter-spacing:4px;background:linear-gradient(135deg,#8B6914 0%,#B8860B 50%,#DAA520 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:brandBreathe 3.5s ease-in-out infinite}
+@keyframes brandBreathe{0%,100%{transform:scale(1);filter:drop-shadow(0 0 8px rgba(184,134,11,.4))}50%{transform:scale(1.04);filter:drop-shadow(0 0 20px rgba(218,165,32,.7))}}
+.brand-en{font-size:22px;font-style:italic;font-family:Georgia,"Times New Roman",serif;background:linear-gradient(135deg,#8B6914 0%,#B8860B 50%,#DAA520 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;letter-spacing:1.5px;margin-bottom:20px;animation:brandBreathe 3.5s ease-in-out infinite}
 .brand-motto{margin-top:10px}
 .motto-cn{font-size:18px;color:#FF8C00;margin:0 0 6px;font-family:"Microsoft YaHei","PingFang SC",sans-serif;animation:mottoBreathe 3s ease-in-out infinite;text-shadow:0 0 10px rgba(255,140,0,.3)}
 .motto-en{font-size:15px;color:#FF8C00;font-style:italic;font-family:Georgia,"Times New Roman",serif;margin:0;animation:mottoBreathe 3s ease-in-out infinite .3s;text-shadow:0 0 8px rgba(255,140,0,.25)}

@@ -37,6 +37,52 @@ function loadHubProgress(key) {
 }
 function saveHubProgress(key, data) { localStorage.setItem(key, JSON.stringify(data)); }
 
+// ---------- 音效系统 (Web Audio API, 零外部依赖) ----------
+let _audioCtx = null;
+function _getAudioCtx() {
+  if (!_audioCtx) {
+    _audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  }
+  return _audioCtx;
+}
+function playSound(type) {
+  try {
+    var ctx = _getAudioCtx();
+    var osc = ctx.createOscillator();
+    var gain = ctx.createGain();
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+
+    if (type === 'correct') {
+      // C5→E5 上行双音，清脆愉悦
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(523.25, ctx.currentTime);
+      osc.frequency.setValueAtTime(659.25, ctx.currentTime + 0.08);
+      gain.gain.setValueAtTime(0.25, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.2);
+      osc.stop(ctx.currentTime + 0.22);
+    } else if (type === 'wrong') {
+      // 低频柔和嗡声，不刺耳
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(220, ctx.currentTime);
+      osc.frequency.linearRampToValueAtTime(160, ctx.currentTime + 0.2);
+      gain.gain.setValueAtTime(0.15, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.22);
+      osc.stop(ctx.currentTime + 0.25);
+    } else if (type === 'complete') {
+      // C5→E5→G5 三音上行琶音，交卷成就感
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(523.25, ctx.currentTime);
+      osc.frequency.setValueAtTime(659.25, ctx.currentTime + 0.1);
+      osc.frequency.setValueAtTime(783.99, ctx.currentTime + 0.2);
+      gain.gain.setValueAtTime(0.2, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.38);
+      osc.stop(ctx.currentTime + 0.4);
+    }
+    osc.start(ctx.currentTime);
+  } catch(e) { /* 静默降级：老旧浏览器或不支持 Web Audio */ }
+}
+
 // ---------- DOM 快捷引用 ----------
 function $(id) { return document.getElementById(id); }
 

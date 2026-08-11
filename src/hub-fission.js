@@ -56,9 +56,9 @@ function renderFission() {
     // 反馈
     if (showResult) {
       if (isCorrect) {
-        html += '<div class="q-feedback ok">✓ ' + esc(q.answer) + '</div>';
+        html += '<div class="q-feedback ok fadeInUp">✓ ' + esc(q.answer) + '</div>';
       } else {
-        html += '<div class="q-feedback bad">✗ 正确答案: <span class="ans">' + esc(q.answer) + '</span></div>';
+        html += '<div class="q-feedback bad fadeInUp">✗ 正确答案: <span class="ans">' + esc(q.answer) + '</span></div>';
       }
     }
 
@@ -124,12 +124,29 @@ function refreshFissionCard(qNo) {
   if (showResult) {
     var fbHtml = '';
     if (isCorrect) {
-      fbHtml = '<div class="q-feedback ok">✓ ' + esc(q.answer) + '</div>';
+      fbHtml = '<div class="q-feedback ok fadeInUp">✓ ' + esc(q.answer) + '</div>';
     } else {
-      fbHtml = '<div class="q-feedback bad">✗ 正确答案: <span class="ans">' + esc(q.answer) + '</span></div>';
+      fbHtml = '<div class="q-feedback bad fadeInUp">✗ 正确答案: <span class="ans">' + esc(q.answer) + '</span></div>';
     }
     if (fbEl) fbEl.outerHTML = fbHtml;
     else card.insertAdjacentHTML('beforeend', fbHtml);
+  }
+
+  // 动画 & 音效反馈
+  if (showResult) {
+    if (isCorrect) {
+      playSound('correct');
+      if (inp) inp.classList.add('correct-anim');
+      card.classList.add('correct-anim');
+    } else {
+      playSound('wrong');
+      if (inp) inp.classList.add('wrong-anim');
+      card.classList.add('wrong-anim');
+    }
+    setTimeout(function() {
+      card.classList.remove('correct-anim', 'wrong-anim');
+      if (inp) inp.classList.remove('correct-anim', 'wrong-anim');
+    }, 550);
   }
 
   updateFissionScore();
@@ -145,8 +162,12 @@ function updateFissionScore() {
     if (state.answers[q.no] && checkFillAnswer(state.answers[q.no], q.answer)) correct++;
   });
   panel.innerHTML = '<span class="score-label">得分：</span>' +
-    '<span class="score-value">' + correct + ' / ' + batch.count + '</span>' +
+    '<span class="score-value pop">' + correct + ' / ' + batch.count + '</span>' +
     '<span class="score-pct">（' + Math.round(correct / batch.count * 100) + '%）</span>';
+  setTimeout(function() {
+    var sv = panel.querySelector('.score-value');
+    if (sv) sv.classList.remove('pop');
+  }, 400);
 }
 
 function handleFissionSubmit() {
@@ -163,4 +184,12 @@ function handleFissionSubmit() {
   saveHubProgress(PROGRESS_KEYS.fission, progress);
 
   renderMain();
+  // 交卷音效 + 卡片依次浮现
+  playSound('complete');
+  setTimeout(function() {
+    var cards = document.querySelectorAll('.fission-card');
+    cards.forEach(function(card, i) {
+      setTimeout(function() { card.classList.add('reveal'); }, i * 80);
+    });
+  }, 60);
 }

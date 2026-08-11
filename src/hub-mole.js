@@ -58,9 +58,9 @@ function renderMole() {
     // 反馈
     if (showResult) {
       if (isCorrect) {
-        html += '<div class="q-feedback ok">✓ 正确！</div>';
+        html += '<div class="q-feedback ok fadeInUp">✓ 正确！</div>';
       } else {
-        html += '<div class="q-feedback bad">✗ 错误！正确答案是 ' + q.answer + '. ' + getOptionText(q, q.answer) + '</div>';
+        html += '<div class="q-feedback bad fadeInUp">✗ 错误！正确答案是 ' + q.answer + '. ' + getOptionText(q, q.answer) + '</div>';
       }
     }
 
@@ -150,12 +150,36 @@ function refreshMoleCard(qNo) {
   if (showResult) {
     var fbHtml = '';
     if (isCorrect) {
-      fbHtml = '<div class="q-feedback ok">✓ 正确！</div>';
+      fbHtml = '<div class="q-feedback ok fadeInUp">✓ 正确！</div>';
     } else {
-      fbHtml = '<div class="q-feedback bad">✗ 错误！正确答案是 ' + q.answer + '. ' + getOptionText(q, q.answer) + '</div>';
+      fbHtml = '<div class="q-feedback bad fadeInUp">✗ 错误！正确答案是 ' + q.answer + '. ' + getOptionText(q, q.answer) + '</div>';
     }
     if (fbEl) fbEl.outerHTML = fbHtml;
     else card.insertAdjacentHTML('beforeend', fbHtml);
+  }
+
+  // 动画 & 音效反馈
+  if (showResult) {
+    if (isCorrect) {
+      playSound('correct');
+      card.classList.add('correct-anim');
+      var correctOpt = card.querySelector('.mole-ans-correct');
+      if (correctOpt) correctOpt.classList.add('opt-bounce');
+    } else {
+      playSound('wrong');
+      card.classList.add('wrong-anim');
+      var wrongOpt = card.querySelector('.mole-ans-wrong');
+      if (wrongOpt) wrongOpt.classList.add('opt-bounce');
+      // 正确答案按钮延迟高亮浮现
+      setTimeout(function() {
+        var revealOpt = card.querySelector('.mole-ans-correct');
+        if (revealOpt) revealOpt.classList.add('opt-reveal');
+      }, 280);
+    }
+    // 动画结束后自动清理 class
+    setTimeout(function() {
+      card.classList.remove('correct-anim', 'wrong-anim');
+    }, 550);
   }
 
   updateMoleScore();
@@ -171,8 +195,12 @@ function updateMoleScore() {
     if (state.answers[q.no] && state.answers[q.no] === q.answer) correct++;
   });
   panel.innerHTML = '<span class="score-label">得分：</span>' +
-    '<span class="score-value">' + correct + ' / ' + batch.count + '</span>' +
+    '<span class="score-value pop">' + correct + ' / ' + batch.count + '</span>' +
     '<span class="score-pct">（' + Math.round(correct / batch.count * 100) + '%）</span>';
+  setTimeout(function() {
+    var sv = panel.querySelector('.score-value');
+    if (sv) sv.classList.remove('pop');
+  }, 400);
 }
 
 function handleMoleSubmit() {
@@ -189,4 +217,12 @@ function handleMoleSubmit() {
   saveHubProgress(PROGRESS_KEYS.mole, progress);
 
   renderMain();
+  // 交卷音效 + 卡片依次浮现
+  playSound('complete');
+  setTimeout(function() {
+    var cards = document.querySelectorAll('.mole-card');
+    cards.forEach(function(card, i) {
+      setTimeout(function() { card.classList.add('reveal'); }, i * 80);
+    });
+  }, 60);
 }
